@@ -84,7 +84,7 @@ const SignalTypeBody: Record<SignalType, string> = {
 export const Signal: React.FC<{ type: SignalType }> = ({ type }) => {
   return (
     <div className="flex flex-col justify-items-center gap-1 bg-zinc-100 p-0 rounded-lg">
-      <div className="text-l font-bold px-2 self-start text-zinc-50 bg-zinc-950 rounded-md mb-4 mt-9">
+      <div className="text-l px-2 self-start text-zinc-50 bg-zinc-950 rounded-md mb-4 mt-9">
         {SignalTypeTitles[type]}
       </div>
       <div className="relative grid grid-cols-6 gap-8">
@@ -103,11 +103,33 @@ export const Signal: React.FC<{ type: SignalType }> = ({ type }) => {
           />
         </svg>
         <div className="col-span-5 flex flex-col">
-          <div className="bg-blue-500 text-white text-m font-bold py-1 px-2 rounded-full self-start">
-            {SignalTypeShout[type]}
+          <div className="bg-blue-500 text-white text-m font-bold py-1 px-2 rounded-full self-start -left-2 relative">
+            {SignalTypeShout[type]}!
+            <svg
+              className="absolute -left-3 -bottom-2 w-7 h-7"
+              width="42px"
+              height="21px"
+              viewBox="0 0 42 21"
+              version="1.1"
+              xmlns="http://www.w3.org/2000/svg"
+              xmlnsXlink="http://www.w3.org/1999/xlink"
+            >
+              <g id="Captain" stroke="none" fill="none" fillRule="evenodd">
+                <g
+                  id="Speech"
+                  transform="translate(0.000000, -62.000000)"
+                  className="fill-blue-500"
+                >
+                  <path
+                    d="M21.9884287,62.5808773 C20.5115251,76.1012476 13.1820488,82.8614328 1.0658141e-14,82.8614328 C18.5015814,82.8614328 32.2438903,80.2409552 41.2269267,75 L21.9884287,62.5808773 Z"
+                    id="Path-8"
+                  ></path>
+                </g>
+              </g>
+            </svg>
           </div>
-          <div className="text-xs font-bold  mt-4">{SignalTypeIntro[type]}</div>
-          <div className="text-xs mt-2">
+          <div className="text-sm mt-4">{SignalTypeIntro[type]}</div>
+          <div className="text-xs text-zinc-500 mt-2">
             {SignalTypeBody[type]}
             {type === 'ritsen' && (
               <>
@@ -170,7 +192,7 @@ const SignalHands: Partial<Record<SignalType, React.ReactNode>> = {
   ),
   links: (
     <svg
-      className="absolute -top-5 -left-5 w-12 fill-blue-500 z-10"
+      className="absolute top-1 -left-5 w-12 fill-blue-500 z-10"
       xmlns="http://www.w3.org/2000/svg"
       width="100"
       height="100"
@@ -184,7 +206,7 @@ const SignalHands: Partial<Record<SignalType, React.ReactNode>> = {
   ),
   rechts: (
     <svg
-      className="absolute -top-5 left-5 w-12 fill-blue-500 z-10"
+      className="absolute top-1 left-4 w-12 fill-blue-500 z-10"
       xmlns="http://www.w3.org/2000/svg"
       width="100"
       height="100"
