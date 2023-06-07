@@ -15,11 +15,18 @@ export const PageHeaderContent: React.FC<{ page: PageType }> = ({ page }) => {
   return isCSR
     ? createPortal(
         <>
-          <div className="z-10 w-full text-center text-xs font-bold">{pageTitles[page]}</div>
+          {notRoot ? (
+            <div className="z-10 w-full text-center text-xs top-4 absolute h-8 flex items-center justify-center text-zinc-300">
+              {pageTitles['home']}
+            </div>
+          ) : null}
+          <div className="z-10 w-full text-center text-md font-bold bottom-3 absolute h-8 flex items-center justify-center text-zinc-400">
+            {pageTitles[page]}
+          </div>
           {notRoot ? (
             <Link
               href="/"
-              className="flex items-center justify-items-center gap-1 text-blue-600 z-10 bottom-2 absolute"
+              className="flex items-center justify-items-center gap-1 text-blue-600 z-10 bottom-3 absolute h-8"
             >
               <BsChevronLeft size={18} /> Terug
             </Link>
