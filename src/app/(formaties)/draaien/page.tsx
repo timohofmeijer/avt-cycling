@@ -86,18 +86,18 @@ const Page: React.FC = () => {
           />
           <div className="col-span-4">
             <p className="mb-4 text-sm text-zinc-700">
-              Wanneer de voorste renner wil draaien schud hij met zijn linker elleboog. buurman,
+              Wanneer de voorste renner wil draaien schud hij met zijn linker elleboog. Hij of zij
               schuift dan rustig naar rechts en haalt een iets druk van zijn pedalen.
             </p>
             <p className="mb-4 text-sm text-zinc-700">
-              Hij stuurt vervolgens uit naar rechts en halt iets druk van zijn pedalen.
+              Hij of zij stuurt vervolgens uit naar rechts en halt iets druk van zijn pedalen.
             </p>
             <p className="mb-4 text-sm text-zinc-700">
-              Hij laat zich afzakken naar de achterkant van de groep.
+              Hij of zij laat zich afzakken naar de achterkant van de groep.
             </p>
             <p className="mb-4 text-sm text-zinc-700">
-              Achteraan stuurt hij terug naar links om vloeiend achter de laatste renner aan te
-              sluiten.
+              Achteraan stuurt hij of zij terug naar links om vloeiend achter de laatste renner aan
+              te sluiten.
             </p>
             <p className="mb-4 text-sm text-zinc-700">
               Het beste is om je af te laten zaken aan de kant vanwaar de wind het meest waait. De
