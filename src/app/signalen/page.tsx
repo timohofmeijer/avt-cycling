@@ -45,9 +45,9 @@ const Page: React.FC = () => {
           <Signal type="links" />
           <Signal type="rechts" />
           <Signal type="stop" />
-          <Signal type="rustig" />
           <Signal type="ritsen" />
           <Signal type="twee" />
+          <Signal type="rustig" />
           <Signal type="compleet" />
         </div>
       </div>

@@ -8,10 +8,10 @@ type SignalType =
   | 'links'
   | 'rechts'
   | 'stop'
-  | 'rustig'
-  | 'compleet'
   | 'ritsen'
   | 'twee'
+  | 'rustig'
+  | 'compleet'
 
 const SignalTypeTitles: Record<SignalType, string> = {
   voor: 'Obstakel rechter voorzijde',
@@ -21,10 +21,10 @@ const SignalTypeTitles: Record<SignalType, string> = {
   links: 'Linksaf slaan',
   rechts: 'Rechtsaf slaan',
   stop: 'Stoppen',
-  rustig: 'Vaart minderen',
-  compleet: 'De groep is weer compleet',
   ritsen: 'Op een lint gaan rijden',
   twee: 'Twee aan twee gaan rijden',
+  rustig: 'Vaart minderen',
+  compleet: 'De groep is weer compleet',
 }
 
 const SignalTypeShout: Record<SignalType, string> = {
@@ -35,10 +35,10 @@ const SignalTypeShout: Record<SignalType, string> = {
   links: 'Links',
   rechts: 'Rechts',
   stop: 'Stop',
-  rustig: 'Rustig',
-  compleet: 'Compleet',
   ritsen: 'Ritsen',
   twee: 'Twee',
+  rustig: 'Rustig',
+  compleet: 'Compleet',
 }
 
 const SignalTypeIntro: Record<SignalType, string> = {
@@ -54,13 +54,13 @@ const SignalTypeIntro: Record<SignalType, string> = {
   links:
     'Wanneer we als groep een afslag nemen wordt dit tijdig geroepen een steken we onze hand uit.',
   stop: 'Wanneer er lek is gereden, voor een plaspauze of er is iets anders waarvoor we moeten stoppen.',
-  rustig:
-    'Wanneer de groep incompleet is door een verkeers vertraging of iemand die het niet bij kan houden dan houden we in tot de groep weer compleet is.',
-  compleet:
-    'Wanneer de groep incompleet was en zojuist weer bij elkaar dan is dit het teken dat we weer op tempo kunnen gaan rijden.',
   ritsen:
     'Wanneer de weg dermate smal is dat het gevaarlijk is of dat we mensen laten schrikken, gaan we achter elkaar rijden.',
   twee: 'Wanneer de groep op een lint rijdt en er is weer genoeg ruimt om naast elkaar te rijden steekt te voorste wegkapitein 2 vingers in de lucht en wordt het signaal naar achteren geroepen.',
+  rustig:
+    'Wanneer de groep de snelheid moet verlagen, bijvoorbeeld omdat we incompleet zijn door een verkeers vertraging of iemand die het niet bij kan houden dan houden we in tot de groep weer compleet is.',
+  compleet:
+    'Wanneer de groep incompleet was en zojuist weer bij elkaar dan is dit het teken dat we weer op tempo kunnen gaan rijden.',
 }
 
 const SignalTypeBody: Record<SignalType, string> = {
@@ -73,12 +73,11 @@ const SignalTypeBody: Record<SignalType, string> = {
   links: 'Geen signaal betekend rechtdoor.',
   rechts: 'Geen signaal betekend rechtdoor.',
   stop: 'Alleen de voorste renner steeks zijn hand op! De rest houd zijn handen bij de remmen. Ga niet midden op de weg, het fietspad of in een bocht stilstaan, maar kies een overzichtelijke uitrit of berm.',
-  rustig:
-    'Bijvoorbeeld een fietser met een lagere snelheid, een wandelaar of een geparkeerde auto.',
-  compleet:
-    'Dit voorkomt dat iedereen achterom moet gaan zitten kijken en minder oog heeft voor de omgeving.',
   ritsen: 'Ook wel op een lint genoemd. Laat je achter degene waar je naast fietst zakken.',
   twee: 'Laat dit signaal in princiepe over aan de wegkapiteins.',
+  rustig: 'Dit signaal wordt vaak opgevolgd door het ‘COMPLEET’ signaal.',
+  compleet:
+    'Dit voorkomt dat iedereen achterom moet gaan zitten kijken en minder oog heeft voor de omgeving.',
 }
 
 export const Signal: React.FC<{ type: SignalType }> = ({ type }) => {
