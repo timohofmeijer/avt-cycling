@@ -212,7 +212,7 @@ const SignalHands: Partial<Record<SignalType, React.ReactNode>> = {
   ),
   ritsen: (
     <svg
-      className="absolute -top-5 left-1 w-12 z-10"
+      className="absolute -top-5 left-2 w-12 z-10"
       xmlns="http://www.w3.org/2000/svg"
       width="100"
       height="100"
@@ -223,7 +223,7 @@ const SignalHands: Partial<Record<SignalType, React.ReactNode>> = {
   ),
   twee: (
     <svg
-      className="absolute -top-5 left-1 w-12 z-10"
+      className="absolute -top-5 left-2 w-12 z-10"
       xmlns="http://www.w3.org/2000/svg"
       width="100"
       height="100"
