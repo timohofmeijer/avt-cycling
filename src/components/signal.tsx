@@ -42,37 +42,37 @@ const SignalTypeShout: Record<SignalType, string> = {
 }
 
 const SignalTypeIntro: Record<SignalType, string> = {
-  voor: 'Wanneer er iets of iemand aan de rechter voorzijde bevindt waar we ons als groep links omheen moeten bewegen.',
+  voor: 'Wanneer er iets of iemand aan de rechter voorzijde opduikt waar we rekening mee moeten houden.',
   tegen:
-    'Wanneer er iets of iemand aan de linker voorzijde bevindt waar we voor uit moeten kijken en waar we ons rechts omheen moeten bewegen.',
+    'Wanneer er iets of iemand aan de linker voorzijde opduikt waar we rekening mee moeten houden.',
   achter:
-    'Wanneer de een auto of fietser de groep vanaf de achterzijde in gaat halen roept de eerste die dit waarneemt ‘achter’.',
+    'Wanneer een auto of fietser de groep vanaf de achterzijde in gaat halen roept de eerste die dit waarneemt ‘achter’.',
   paaltje:
     'Wanneer er iets mogelijk gevaarlijks op ons pad komt dan wijzen we het object aan zodat renners achter ons het kunnen ontwijken. ',
   rechts:
     'Wanneer we als groep een afslag nemen wordt dit tijdig geroepen een steken we onze hand uit.',
   links:
     'Wanneer we als groep een afslag nemen wordt dit tijdig geroepen een steken we onze hand uit.',
-  stop: 'Wanneer er lek is gereden, voor een plaspauze of er iets anders waarvoor we moeten stoppen. Alleen de voorste renner steeks zijn hand op! De rest houd zijn handen bij de remmen.',
+  stop: 'Wanneer er lek is gereden, voor een plaspauze of er is iets anders waarvoor we moeten stoppen.',
   rustig:
     'Wanneer de groep incompleet is door een verkeers vertraging of iemand die het niet bij kan houden dan houden we in tot de groep weer compleet is.',
   compleet:
     'Wanneer de groep incompleet was en zojuist weer bij elkaar dan is dit het teken dat we weer op tempo kunnen gaan rijden.',
   ritsen:
     'Wanneer de weg dermate smal is dat het gevaarlijk is of dat we mensen laten schrikken, gaan we achter elkaar rijden.',
-  twee: 'Wanneer de groep op een lint rijdt en er is weer genoeg ruimt om naast elkaar te rijden steekt te voorste wegkapitein 2 vingers in de lucht en word het signaal naar achteren geroepen.',
+  twee: 'Wanneer de groep op een lint rijdt en er is weer genoeg ruimt om naast elkaar te rijden steekt te voorste wegkapitein 2 vingers in de lucht en wordt het signaal naar achteren geroepen.',
 }
 
 const SignalTypeBody: Record<SignalType, string> = {
   voor: 'Bijvoorbeeld een fietser met een lagere snelheid, een wandelaar of een geparkeerde auto.',
   tegen: 'Meestal een tegenligger maar mogelijk ook een object zoals een bouwcontainer.',
   achter:
-    'Dit voorkomt schrikreacties wanneer er te breed wordt gereden kunnen we dit tijdig corrigeren.',
+    'Dit voorkomt schrikreacties en wanneer er te breed wordt gereden kunnen we dit tijdig corrigeren.',
   paaltje:
     'Het meest voorkomend zijn autowerende verkeerspaaltjes. Deze worden altijd benoemd en aangewezen omdat je deze midden in de groep makkelijk over hoofd ziet.',
   links: 'Geen signaal betekend rechtdoor.',
   rechts: 'Geen signaal betekend rechtdoor.',
-  stop: 'Stop niet op de weg, het fietspad of in een bocht. Kies altijd voor een overzichtelijke uitrit of berm.',
+  stop: 'Alleen de voorste renner steeks zijn hand op! De rest houd zijn handen bij de remmen. Ga niet midden op de weg, het fietspad of in een bocht stilstaan, maar kies een overzichtelijke uitrit of berm.',
   rustig:
     'Bijvoorbeeld een fietser met een lagere snelheid, een wandelaar of een geparkeerde auto.',
   compleet:

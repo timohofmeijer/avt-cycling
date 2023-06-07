@@ -49,7 +49,7 @@ export default function Home() {
 
         <section>
           <h2 className="text-2xl font-bold pt-8 pb-4">Ben je nieuw?</h2>
-          <p>Of lees je dit voor het eerst 😀</p>
+          <p>Of lees je dit voor het eerst 😀.</p>
           <LinkButton href="/nieuwe-deelnemers">Lees dit even door</LinkButton>
         </section>
 
