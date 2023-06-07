@@ -112,7 +112,7 @@ export const Signal: React.FC<{ type: SignalType }> = ({ type }) => {
             {type === 'ritsen' && (
               <>
                 {' '}
-                <Link href="/ritsen" className="text-blue-500 underline">
+                <Link href="/ritsen" className="text-blue-600 underline">
                   Zie hier hoe dit werkt
                 </Link>
                 .

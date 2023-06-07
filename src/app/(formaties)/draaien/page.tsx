@@ -20,10 +20,10 @@ const Page: React.FC = () => {
           je je ‘kopbeurt’ zo kort maken als je wilt, dit is geen enkel probleem aangezien dit een
           goeie manier is om niveau verschillen te ondervangen.
         </p>
-        <a href="#sociaal" className="text-blue-500 mb-1">
+        <a href="#sociaal" className="text-blue-600 mb-1">
           Sociaal draaien
         </a>
-        <a href="#lint" className="text-blue-500 mb-1">
+        <a href="#lint" className="text-blue-600 mb-1">
           Draaien in een lint
         </a>
         <h2 className="text-2xl font-bold mt-8 mb-5" id="sociaal">
