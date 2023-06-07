@@ -87,7 +87,7 @@ export const Signal: React.FC<{ type: SignalType }> = ({ type }) => {
       <div className="text-l font-bold px-2 self-start text-zinc-50 bg-zinc-950 rounded-md mb-4 mt-9">
         {SignalTypeTitles[type]}
       </div>
-      <div className="relative grid grid-cols-6 gap-4">
+      <div className="relative grid grid-cols-6 gap-8">
         {SignalHands[type]}
         <svg
           className="col-span-1 opacity-20"
