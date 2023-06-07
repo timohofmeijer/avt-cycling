@@ -50,9 +50,9 @@ const SignalTypeIntro: Record<SignalType, string> = {
   paaltje:
     'Wanneer er iets mogelijk gevaarlijks op ons pad komt dan wijzen we het object aan zodat renners achter ons het kunnen ontwijken. ',
   rechts:
-    'Wanneer we als groep een afslag nemen wordt dit tijdig geroepen een steken we onze hand uit.',
+    'Wanneer we als groep een afslag nemen wordt dit tijdig geroepen en wijzen we met onze arm naar rechts.',
   links:
-    'Wanneer we als groep een afslag nemen wordt dit tijdig geroepen een steken we onze hand uit.',
+    'Wanneer we als groep een afslag nemen wordt dit tijdig geroepen en wijzen we met onze arm naar links.',
   stop: 'Wanneer er lek is gereden, voor een plaspauze of er is iets anders waarvoor we moeten stoppen.',
   ritsen:
     'Wanneer de weg dermate smal is dat het gevaarlijk is of dat we mensen laten schrikken, gaan we achter elkaar rijden.',
