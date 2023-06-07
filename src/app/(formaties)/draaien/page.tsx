@@ -36,15 +36,15 @@ const Page: React.FC = () => {
           vandaar ‘sociaal’ 🙂.
         </p>
         <p className="mb-4">Sociaal draaien werkt als volgt:</p>
-        <div className="flex">
+        <div className="grid grid-cols-6">
           <Image
+            className="col-span-2"
             src="/formatie-draaien-sociaal.png"
             alt="Sociaal draaien"
             width={500}
             height={1976}
-            className="w-1/3"
           />
-          <div className="">
+          <div className="col-span-4">
             <p className="mb-4 text-sm text-zinc-700">
               Wanneer één van voorste renners wil draaien, versneld de linker renner voorbij degene
               naast hem of haar, schuift dan rustig naar rechts en haalt een iets druk van zijn
@@ -76,15 +76,15 @@ const Page: React.FC = () => {
           worden.
         </p>
         <p className="mb-4">Draaien wanneer we op een lint rijden werkt als volgt:</p>
-        <div className="flex">
+        <div className="w-full grid grid-cols-6">
           <Image
+            className="col-span-2"
             src="/formatie-draaien-lint.png"
             alt="Sociaal draaien"
             width={500}
             height={1866}
-            className="w-1/4"
           />
-          <div className="">
+          <div className="col-span-4">
             <p className="mb-4 text-sm text-zinc-700">
               Wanneer de voorste renner wil draaien schud hij met zijn linker elleboog. buurman,
               schuift dan rustig naar rechts en haalt een iets druk van zijn pedalen.

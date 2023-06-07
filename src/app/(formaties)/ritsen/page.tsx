@@ -22,7 +22,7 @@ const Page: React.FC = () => {
         <p className="mb-4">Ritsen werkt als volgt:</p>
         <div className="flex">
           <Image
-            src="/formatie-ritsen-2.png"
+            src="/formatie-ritsen.png"
             alt="Ritsen"
             width={430}
             height={2127}
