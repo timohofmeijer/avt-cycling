@@ -86,22 +86,23 @@ const Page: React.FC = () => {
           />
           <div className="col-span-4">
             <p className="mb-4 text-sm text-zinc-700">
-              Wanneer de voorste renner wil draaien schud hij met zijn linker elleboog. Hij of zij
-              schuift dan rustig naar rechts en haalt een iets druk van zijn pedalen.
+              Wanneer de voorste renner wil draaien schud degene met zijn linker elleboog.
             </p>
             <p className="mb-4 text-sm text-zinc-700">
-              Hij of zij stuurt vervolgens uit naar rechts en halt iets druk van zijn pedalen.
+              Degene schuift dan rustig naar rechts en haalt iets druk van zijn pedalen.
             </p>
             <p className="mb-4 text-sm text-zinc-700">
-              Hij of zij laat zich afzakken naar de achterkant van de groep.
+              Degene laat zich afzakken naar de achterkant van de groep.
             </p>
             <p className="mb-4 text-sm text-zinc-700">
-              Achteraan stuurt hij of zij terug naar links om vloeiend achter de laatste renner aan
-              te sluiten.
+              Achteraan stuurt degene terug naar links om vloeiend achter de laatste renner aan te
+              sluiten.
             </p>
             <p className="mb-4 text-sm text-zinc-700">
-              Het beste is om je af te laten zaken aan de kant vanwaar de wind het meest waait. De
-              snelle renners zitten dan meer uit de wind, wat de snelheid van de groep vergroot.
+              Het beste is om je af te laten zaken aan de kant waar de wind het meest vandaan komt.
+              De snellere renners zitten dan meer uit de wind, wat de snelheid van de groep
+              vergroot. Wanneer de groep dit expliciet besluit te doen wisselt ook het elleboog
+              signaal, deze wordt dan met rechts gegeven.
             </p>
           </div>
         </div>
