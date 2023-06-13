@@ -1,5 +1,6 @@
 import './globals.css'
 import { Poppins } from 'next/font/google'
+import { PageAnimationWrapper } from '@/components/page-animation-wrapper'
 
 const poppins = Poppins({ weight: ['400', '600'], subsets: ['latin'] })
 
@@ -33,7 +34,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           <div className="absolute z-0 w-full h-full left-0 bg-zinc-200 opacity-90" />
         </header>
         <main className="flex min-h-screen flex-col items-center justify-between p-8 pt-32 max-w-lg overflow-x-hidden">
-          {children}
+          <PageAnimationWrapper>{children}</PageAnimationWrapper>
         </main>
       </body>
     </html>

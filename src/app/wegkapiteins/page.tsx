@@ -1,3 +1,4 @@
+import { PageAnimation } from '@/components/page-animation'
 import { PageHeaderContent } from '@/components/page-header-content'
 import { Metadata } from 'next'
 
@@ -8,7 +9,7 @@ export const metadata: Metadata = {
 
 const Page: React.FC = () => {
   return (
-    <>
+    <PageAnimation>
       <PageHeaderContent page="wegkapiteins" />
       <div className="flex flex-col w-full">
         <h1 className="text-3xl font-bold mb-5">Onze wegkapiteins</h1>
@@ -39,7 +40,7 @@ const Page: React.FC = () => {
         <h2 className="text-l font-bold mt-1 mb-2">Sjoerd</h2>
         <h2 className="text-l font-bold mt-1 mb-2">Timo</h2>
       </div>
-    </>
+    </PageAnimation>
   )
 }
 

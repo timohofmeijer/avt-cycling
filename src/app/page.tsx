@@ -1,4 +1,5 @@
 import { LinkButton } from '@/components/link-button'
+import { PageAnimation } from '@/components/page-animation'
 import { PageHeaderContent } from '@/components/page-header-content'
 import { Metadata } from 'next'
 
@@ -9,7 +10,7 @@ export const metadata: Metadata = {
 
 export default function Home() {
   return (
-    <>
+    <PageAnimation direction="left">
       <PageHeaderContent page="home" />
       <div>
         {/* <p className="mb-4">
@@ -76,6 +77,6 @@ export default function Home() {
           <LinkButton href="/wegkapiteins">Onze wegkapiteins</LinkButton>
         </section>
       </div>
-    </>
+    </PageAnimation>
   )
 }
