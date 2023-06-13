@@ -33,8 +33,8 @@ const Page: React.FC = () => {
         <h2 className="text-l font-bold mt-1 mb-2">Gerjan</h2>
         <h2 className="text-l font-bold mt-1 mb-2">Luuc</h2>
         <h2 className="text-l font-bold mt-1 mb-2">Marc</h2>
-        <h2 className="text-l font-bold mt-1 mb-2">Robbert</h2>
         <h2 className="text-l font-bold mt-1 mb-2">Raymond</h2>
+        <h2 className="text-l font-bold mt-1 mb-2">Robbert</h2>
         <h2 className="text-l font-bold mt-1 mb-2">Sander</h2>
         <h2 className="text-l font-bold mt-1 mb-2">Sjoerd</h2>
         <h2 className="text-l font-bold mt-1 mb-2">Timo</h2>

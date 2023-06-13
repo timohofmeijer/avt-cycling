@@ -18,8 +18,12 @@ const Page: React.FC = () => {
           hand en roep signalen, zodat we als groep snel kunnen reageren op onze omgeving.
         </p>
         <p className="mb-4">
-          We hebben het opgesplitst in signalen welke je aandacht vragen en signalen waarbij we als
-          groep moeten manoeuvreeren.
+          Geef signalen áltijd door, ook als je denkt dat het in een bepaald geval niet nodig is of
+          als je met iemand aan het praten bent.
+        </p>
+        <p className="mb-4">
+          We hebben onze signalen hieronder opgesplitst in signalen welke je aandacht vragen en
+          signalen waarbij we als groep moeten manoeuvreren.
         </p>
 
         <a href="#aandacht" className="text-blue-600 mb-1">

@@ -15,10 +15,10 @@ const Page: React.FC = () => {
         <h1 className="text-3xl font-bold mb-5">Draaien in een groep</h1>
         <p className="mb-4">
           De voorste renners van een groep zullen een stuk harder moeten trappen omdat ze ‘in de
-          wind rijden’. Afhankelijk van waar de wind vandaan komt kan dit wel 30% schelen. Om het
-          kopwerk te verdelen roteren we elke paar minuten. Wanneer je moe bent en vooraan komt, mag
-          je je ‘kopbeurt’ zo kort maken als je wilt, dit is geen enkel probleem aangezien dit een
-          goeie manier is om niveau verschillen te ondervangen.
+          wind rijden’. Afhankelijk van waar de wind vandaan komt kan dit meer dan 30% schelen. Om
+          het kopwerk te verdelen roteren we elke paar minuten. Wanneer je moe bent en vooraan komt,
+          mag je je ‘kopbeurt’ zo kort maken als je wilt, dit is geen enkel probleem aangezien dit
+          een goeie manier is om niveau verschillen te compenseren.
         </p>
         <a href="#sociaal" className="text-blue-600 mb-1">
           Sociaal draaien
