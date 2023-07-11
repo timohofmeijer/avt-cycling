@@ -19,6 +19,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         >
           <a
             className="absolute z-20 select-none right-4"
+            target="_blank"
             href="https://avtriathlon.nl/fietsen/wielrennen/"
           >
             <svg
