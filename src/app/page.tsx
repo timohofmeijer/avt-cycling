@@ -1,6 +1,6 @@
 import { Metadata } from 'next'
-import { PageAnimation } from '@/components/page-animation'
-import { PageHeaderContent } from '@/components/page-header-content'
+import { PageAnimation } from '@/components/PageAnimation'
+import { PageHeaderContent } from '@/components/PageHeaderContent'
 import { LinkButton } from '@/components/LinkButton'
 import { Title } from '@/components/Title'
 import { Paragraph } from '@/components/Paragraph'

@@ -1,6 +1,6 @@
 import { Metadata } from 'next'
-import { PageAnimation } from '@/components/page-animation'
-import { PageHeaderContent } from '@/components/page-header-content'
+import { PageAnimation } from '@/components/PageAnimation'
+import { PageHeaderContent } from '@/components/PageHeaderContent'
 import { Captain } from './Captain'
 import { PageTitle } from '@/components/PageTitle'
 import { Paragraph } from '@/components/Paragraph'

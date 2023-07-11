@@ -2,11 +2,10 @@ import { LinkDown } from '@/components/LinkDown'
 import { PageTitle } from '@/components/PageTitle'
 import { Paragraph } from '@/components/Paragraph'
 import { Title } from '@/components/Title'
-import { PageAnimation } from '@/components/page-animation'
-import { PageHeaderContent } from '@/components/page-header-content'
-import { Signal } from '@/components/signal'
+import { PageAnimation } from '@/components/PageAnimation'
+import { PageHeaderContent } from '@/components/PageHeaderContent'
+import { Signal } from '@/components/Signal'
 import { Metadata } from 'next'
-import { FaArrowAltCircleDown } from 'react-icons/fa'
 
 export const metadata: Metadata = {
   title: 'Signalen – AVT Wielrennen',

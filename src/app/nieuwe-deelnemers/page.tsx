@@ -2,8 +2,8 @@ import { Metadata } from 'next'
 import { LinkDown } from '@/components/LinkDown'
 import { PageTitle } from '@/components/PageTitle'
 import { Title } from '@/components/Title'
-import { PageAnimation } from '@/components/page-animation'
-import { PageHeaderContent } from '@/components/page-header-content'
+import { PageAnimation } from '@/components/PageAnimation'
+import { PageHeaderContent } from '@/components/PageHeaderContent'
 import { Paragraph } from '@/components/Paragraph'
 
 export const metadata: Metadata = {
