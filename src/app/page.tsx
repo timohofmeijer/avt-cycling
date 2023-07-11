@@ -1,7 +1,9 @@
-import { LinkButton } from '@/components/link-button'
+import { Metadata } from 'next'
 import { PageAnimation } from '@/components/page-animation'
 import { PageHeaderContent } from '@/components/page-header-content'
-import { Metadata } from 'next'
+import { LinkButton } from '@/components/LinkButton'
+import { Title } from '@/components/Title'
+import { Paragraph } from '@/components/Paragraph'
 
 export const metadata: Metadata = {
   title: 'AVT Wielrennen',
@@ -22,58 +24,58 @@ export default function Home() {
           wielren groepsritten van AVTriathlon. Omdat het net iets te veel informatie is om voor een
           rit uit te leggen, hebben we het hier netjes op een rijtje gezet.
         </p>
-        <h2 className="text-2xl font-bold pt-8 pb-4">Wat willen we hier mee bereiken</h2>
-        <p className="mb-4">
+        <Title>Wat willen we hier mee bereiken</Title>
+        <Paragraph>
           Wanneer je in een groep rijdt ben je je minder bewust van je omgeving doordat je minder
           ziet en vaak ook met mensen aan praten bent. Dat compenseren we door op een voorspelbare
           manier te handelen en communiceren. Dat is veiliger en rijdt ook meer ontspannen.
-        </p>
-        <p className="mb-4">
+        </Paragraph>
+        <Paragraph>
           Daarnaast maakt dit ons als groep een meer attente verkeersdeelnemer waarmee we het
           slechte imago van de wielrenner –terecht of onterecht– wellicht kunnen helpen ombuigen.
-        </p>
+        </Paragraph>
 
         <section>
-          <h2 className="text-2xl font-bold pt-8 pb-4">Signalen</h2>
-          <p>
+          <Title>Ben je nieuw?</Title>
+          <Paragraph>
+            Leuk dat je mee komt rijden! Lees het volgende even door, dan heb je alvast een idee wat
+            we van elkaar mogen verwachten.
+          </Paragraph>
+          <LinkButton href="/nieuwe-deelnemers">Nieuwe renners</LinkButton>
+        </section>
+
+        <section>
+          <Title>Signalen</Title>
+          <Paragraph>
             Omdat je minder overzicht hebt wanneer je in een groep rijdt, maken we gebruik van
             heldere hand en roep signalen, zodat we als groep snel kunnen reageren op onze omgeving.
-          </p>
+          </Paragraph>
           <LinkButton href="/signalen">Bekijk alle signalen</LinkButton>
         </section>
 
         <section>
-          <h2 className="text-2xl font-bold pt-8 pb-4">Formaties</h2>
-          <p>
+          <Title>Formaties</Title>
+          <Paragraph>
             De voorste renners van een groep zullen een stuk harder moeten trappen omdat ze ‘in de
             wind rijden’. Afhankelijk van waar de wind vandaan komt kan dit meer dan 30% schelen. Om
             het kopwerk te verdelen roteren we elke paar minuten.
-          </p>
+          </Paragraph>
           <LinkButton href="/draaien">Hoe wordt er gedraaid</LinkButton>
-          <p>
-            De voorste renners van een groep zullen een stuk harder moeten trappen omdat ze ‘in de
-            wind rijden’. Afhankelijk van waar de wind vandaan komt kan dit meer dan 30% schelen. Om
-            het kopwerk te verdelen roteren we elke paar minuten.
-          </p>
+          <Paragraph>
+            Wanneer we twee aan twee rijden en de weg wordt smaller of er is veel verkeer, dan zal
+            een wegkapitein het rits signaal geven. We schuiven dan vlot en soepel in elkaar en
+            vormen één enkele rij renners.
+          </Paragraph>
           <LinkButton href="/ritsen">Wanneer en hoe wij ritsen</LinkButton>
         </section>
 
         <section>
-          <h2 className="text-2xl font-bold pt-8 pb-4">Ben je nieuw?</h2>
-          <p>
-            (Of lees je dit voor het eerst 😀) Leuk dat je mee komt rijden! Lees het volgende even
-            door, dan heb je alvast een idee wat we van elkaar mogen verwachten.
-          </p>
-          <LinkButton href="/nieuwe-deelnemers">Lees dit even door</LinkButton>
-        </section>
-
-        <section>
-          <h2 className="text-2xl font-bold pt-8 pb-4">Wegkapiteins</h2>
-          <p>
+          <Title>Wegkapiteins</Title>
+          <Paragraph>
             Bij alle groepsritten van AVTriathlon rijdt er ten minste één wegkapitein mee. Een
             wegkapitein bepaald de route en zorgt dat we als afgesproken rijden. Volg zijn of haar
             aanwijzingen op, dan houden we het samen veilig en voorspelbaar! 🙏🏼
-          </p>
+          </Paragraph>
           <LinkButton href="/wegkapiteins">Onze wegkapiteins</LinkButton>
         </section>
       </div>

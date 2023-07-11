@@ -1,7 +1,12 @@
+import { LinkDown } from '@/components/LinkDown'
+import { PageTitle } from '@/components/PageTitle'
+import { Paragraph } from '@/components/Paragraph'
+import { Title } from '@/components/Title'
 import { PageAnimation } from '@/components/page-animation'
 import { PageHeaderContent } from '@/components/page-header-content'
 import { Signal } from '@/components/signal'
 import { Metadata } from 'next'
+import { FaArrowAltCircleDown } from 'react-icons/fa'
 
 export const metadata: Metadata = {
   title: 'Signalen – AVT Wielrennen',
@@ -13,39 +18,29 @@ const Page: React.FC = () => {
     <PageAnimation>
       <PageHeaderContent page="signalen" />
       <div className="flex flex-col w-full">
-        <h1 className="text-3xl font-bold mb-5">Signalen</h1>
-        <p className="mb-4">
+        <PageTitle>Signalen</PageTitle>
+        <Paragraph>
           Omdat je minder overzicht hebt wanneer je in een groep rijdt, maken we gebruik van heldere
           hand en roep signalen, zodat we als groep snel kunnen reageren op onze omgeving.
-        </p>
-        <p className="mb-4">
+        </Paragraph>
+        <Paragraph>
           Geef signalen áltijd door, ook als je denkt dat het in een bepaald geval niet nodig is of
           als je met iemand aan het praten bent.
-        </p>
-        <p className="mb-4">
+        </Paragraph>
+        <Paragraph>
           We hebben onze signalen hieronder opgesplitst in signalen welke je aandacht vragen en
           signalen waarbij we als groep moeten manoeuvreren.
-        </p>
-
-        <a href="#aandacht" className="text-blue-600 mb-1">
-          Aandacht signalen
-        </a>
-        <a href="#manoeuvreer" className="text-blue-600 mb-1">
-          Manoeuvreer signalen
-        </a>
-
-        <h2 className="text-2xl font-bold pt-24 mb-2" id="aandacht">
-          Aandacht signalen
-        </h2>
+        </Paragraph>
+        <LinkDown hash="#aandacht">Aandacht signalen</LinkDown>
+        <LinkDown hash="#manoeuvreer">Manoeuvreer signalen</LinkDown>
+        <Title id="aandacht">Aandacht signalen</Title>
         <div className="flex flex-col gap-4">
           <Signal type="voor" />
           <Signal type="tegen" />
           <Signal type="achter" />
           <Signal type="paaltje" />
         </div>
-        <h2 className="text-2xl font-bold pt-24 mb-2" id="manoeuvreer">
-          Manoeuvreer signalen
-        </h2>
+        <Title id="manoeuvreer">Manoeuvreer signalen</Title>
         <div className="flex flex-col gap-4">
           <Signal type="links" />
           <Signal type="rechts" />

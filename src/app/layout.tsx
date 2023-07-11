@@ -22,7 +22,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             href="https://avtriathlon.nl/fietsen/wielrennen/"
           >
             <svg
-              className="w-8 h-8 fill-blue-500"
+              className="w-8 h-8 fill-blue-600"
               xmlns="http://www.w3.org/2000/svg"
               width="874"
               height="842"

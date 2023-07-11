@@ -23,23 +23,23 @@ export const PageHeaderContent: React.FC<{ page: PageType }> = ({ page }) => {
             // transition={{ delay: 0.2 }}
           >
             {notRoot ? (
-              <div className="w-full text-center text-xs relative h-8 flex items-center justify-center text-zinc-400">
+              <div className="relative flex items-center justify-center w-full h-8 text-xs text-center text-zinc-400">
                 {pageTitles['home']}
               </div>
             ) : null}
-            <div className="w-full text-center text-md font-bold bottom-0 absolute h-8 flex items-center justify-center text-zinc-500">
+            <div className="absolute bottom-0 flex items-center justify-center w-full h-8 font-bold text-center text-md text-zinc-500">
               {pageTitles[page]}
             </div>
           </motion.div>
           {notRoot ? (
             <motion.div
-              className="bottom-3 absolute z-10"
+              className="absolute z-10 bottom-3"
               initial={{ scale: 0.5, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
               transition={{ delay: 0.35 }}
             >
               <Link
-                className="flex items-center justify-items-center gap-1 text-blue-600 bottom-0 absolute h-8"
+                className="absolute bottom-0 flex items-center h-8 gap-1 text-blue-600 justify-items-center"
                 href="/"
               >
                 <BsChevronLeft size={18} /> Terug
