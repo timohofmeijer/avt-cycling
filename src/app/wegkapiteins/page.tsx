@@ -1,6 +1,7 @@
+import { Metadata } from 'next'
 import { PageAnimation } from '@/components/page-animation'
 import { PageHeaderContent } from '@/components/page-header-content'
-import { Metadata } from 'next'
+import { Captain } from './Captain'
 
 export const metadata: Metadata = {
   title: 'Wegkapiteins – AVT Wielrennen',
@@ -11,34 +12,25 @@ const Page: React.FC = () => {
   return (
     <PageAnimation>
       <PageHeaderContent page="wegkapiteins" />
-      <div className="flex flex-col w-full">
-        <h1 className="text-3xl font-bold mb-5">Onze wegkapiteins</h1>
-        <p className="mb-4">TODO: trainers?, voorrijders vs kapiteins?, foto?, tekst?</p>
-        <p className="mb-4">
-          AVT wegkapiteins hebben een clinic gevolgt bij de NTFU om jullie zo goed mogelijk over de
-          weg te helpen loodsen. We zullen proberen de afspraken, zoals op deze site omschreven,
-          consistent na te leven en hiermee onze ritten samen zo voorspelbaar en veilig mogelijk te
-          maken.
+      <div className="flex flex-col w-full pb-7">
+        <h1 className="mb-5 text-3xl font-bold">Wegkapiteins</h1>
+        <p className="mb-8">
+          Wij zullen proberen de afspraken, zoals op deze site omschreven, consistent na te leven en
+          hiermee onze ritten samen zo voorspelbaar en veilig mogelijk te maken. Met julle
+          medewerking creëren we zo meer ruimte om samen lekker te rijden, trainen en koersen! 🙏🏼
         </p>
-        {/* <p className="mb-4">
-        Rijden in een groep is anders dan alleen rijden, of met een vriend. Je manier van rijden is
-        van invloed op de veiligheid van de andere renners in de groep. Om dit te ondervangen
-        proberen we het middels consistent naleven van een aantal afspraken zo voorspelbaar en
-        veilig mogelijk te maken.
-      </p> */}
-
-        <h2 className="text-l font-bold mt-1 mb-2">Albert Jan</h2>
-        <h2 className="text-l font-bold mt-1 mb-2">Arie</h2>
-        <h2 className="text-l font-bold mt-1 mb-2">Christa</h2>
-        <h2 className="text-l font-bold mt-1 mb-2">Frank</h2>
-        <h2 className="text-l font-bold mt-1 mb-2">Gerjan</h2>
-        <h2 className="text-l font-bold mt-1 mb-2">Luuc</h2>
-        <h2 className="text-l font-bold mt-1 mb-2">Marc</h2>
-        <h2 className="text-l font-bold mt-1 mb-2">Raymond</h2>
-        <h2 className="text-l font-bold mt-1 mb-2">Robbert</h2>
-        <h2 className="text-l font-bold mt-1 mb-2">Sander</h2>
-        <h2 className="text-l font-bold mt-1 mb-2">Sjoerd</h2>
-        <h2 className="text-l font-bold mt-1 mb-2">Timo</h2>
+        <Captain name="Albert Jan Kerssen" image="albert-jan.jpeg" stravaId="43085263" />
+        <Captain name="Arie Kingma" image="arie.jpeg" stravaId="31785656" />
+        {/* <User name="Christa" image="" stravaId="" /> */}
+        <Captain name="Frank Zaal" image="frank.jpeg" stravaId="2211334" />
+        <Captain name="Gerjan van Roekel" image="gerjan.jpeg" stravaId="586548" />
+        <Captain name="Luuc Rutgers" image="luuc.jpeg" stravaId="7239918" />
+        <Captain name="Mark Wossink" image="mark.jpeg" stravaId="44558029" />
+        <Captain name="Raymond Kievit" image="raymond.jpeg" stravaId="9871152" />
+        <Captain name="Robbert van der Kieft" image="blank.png" stravaId="" />
+        <Captain name="Sander Teeuwisse" image="blank.png" stravaId="" />
+        <Captain name="Sjoerd Roelofs" image="blank.png" stravaId="32433862" />
+        <Captain name="Timo" image="timo.jpeg" stravaId="2019517" />
       </div>
     </PageAnimation>
   )
