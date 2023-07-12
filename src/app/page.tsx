@@ -71,7 +71,7 @@ export default function Home() {
         <section>
           <Title>Wegkapiteins</Title>
           <Paragraph>
-            Bij alle groepsritten van AVTriathlon rijdt er ten minste één wegkapitein mee. Een
+            Bij alle groepsritten van AVTriathlon rijdt er tenminste één wegkapitein mee. Een
             wegkapitein bepaald de route en zorgt dat we als afgesproken rijden. Volg zijn of haar
             aanwijzingen op, dan houden we het samen veilig en voorspelbaar! 🙏🏼
           </Paragraph>

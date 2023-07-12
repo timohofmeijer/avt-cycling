@@ -36,13 +36,13 @@ const Page: React.FC = () => {
           <li>
             Loop je fiets geregeld na op schade, slijtage en of alles nog goed aangedraaid is.
           </li>
-          <li>Verlichting mochten we onverhoop later thuis komen.</li>
+          <li>Verlichting mochten we onverhoopt later thuis komen.</li>
         </ul>
-        <Title id="verantwoordelijk">Zelf verantwoordelijk</Title>
+        {/* <Title id="verantwoordelijk">Zelf verantwoordelijk</Title>
         <Paragraph>
           Houd je aan verkeersregels en kijk altijd zélf of het veilig is om over te steken (ook
           wanneer iemand VRIJ roept).
-        </Paragraph>
+        </Paragraph> */}
         <Title id="algemeen">Algemene gedragsregels</Title>
         <ul className="mb-4 ml-4 list-disc">
           <li>Ik houd zichtbaar rekening met anderen in het verkeer.</li>
@@ -62,14 +62,14 @@ const Page: React.FC = () => {
           <li>Ik gooi afval in een afvalbak.</li>
           <li>Ik maak tijdens het rijden in de groep geen gebruik van een ligstuur.</li>
         </ul>
-        <Title id="tehard">Gaat het te hard geef het aan!</Title>
+        <Title id="tehard">Gaat het te hard, geef het aan!</Title>
         <Paragraph>
           Laat het even weten aan één van de wegkapiteins. We hanteren een “samen uit, samen thuis”
           beleid en het is geen probleem om wat rustiger te rijden.
         </Paragraph>
         <Title id="etendrinken">Eet en drink voldoende</Title>
         <Paragraph>
-          Tijdens het fietsen verbruik je veel energie en verlies je vocht. Zorg dat voldoende
+          Tijdens het fietsen verbruik je veel energie en verlies je vocht. Zorg dat je voldoende
           koolhydraten (suiker) en vocht tot je neemt. Met name bij langere ritten maakt dit een
           enorm verschil op de intensiteit die je vast kan houden.
         </Paragraph>
@@ -77,7 +77,7 @@ const Page: React.FC = () => {
         <Paragraph>
           Probeer je voorwiel niet voorbij het achterwiel van je voorganger te laten komen wanneer
           je achter iemand rijdt. Wanneer je voorwiel uit lijn wordt geduwd door het achterwiel van
-          je voorganger is een valpartij bijna niet te vermijden (omdat jij en je fiets de andere
+          je voorganger, is een valpartij bijna niet te vermijden (omdat jij en je fiets de andere
           kant op gaan).
         </Paragraph>
       </div>

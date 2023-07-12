@@ -24,7 +24,7 @@ const Page: React.FC = () => {
           voorste renner of een wegkapitein het rits signaal geven. We schuiven dan vlot en soepel
           in elkaar en vormen één enkele rij renners.
         </Paragraph>
-        <Title>Het signaal ritsen wordt gegeven</Title>
+        <Title>Het signaal om te gaan ritsen</Title>
         <Signal type="ritsen" modStandalone={true} />
         <Title>Vervolgens schuiven we als volgt in elkaar</Title>
         <div className="flex gap-6">

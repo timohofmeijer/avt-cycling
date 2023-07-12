@@ -47,7 +47,7 @@ const Page: React.FC = () => {
           />
           <div className="col-span-4">
             <ParagraphSmall>
-              Wanneer één van voorste renners wil draaien, versneld de linker renner voorbij degene
+              Wanneer één van voorste renners wil draaien, versnelt de linker renner voorbij degene
               naast hem of haar, schuift dan rustig naar rechts en haalt een iets druk van zijn
               pedalen.
             </ParagraphSmall>
@@ -55,7 +55,7 @@ const Page: React.FC = () => {
               De gehele linker rij zet net iets aan zodat ze 2 plaatsen opschuiven.
             </ParagraphSmall>
             <ParagraphSmall>
-              De renner die rechts achteraan rijdt versneld ook iets en schuift op naar de linker
+              De renner die rechts achteraan rijdt versnelt ook iets en schuift op naar de linker
               rij en daarna 2 plaatsen naar voren.
             </ParagraphSmall>
             <ParagraphSmall>
@@ -67,7 +67,7 @@ const Page: React.FC = () => {
 
         <Title id="lint">Draaien in een lint</Title>
         <Paragraph>
-          Dit doen we niet vaak, maar wanneer we efficienter op een hoger tempo willen rijden, gaan
+          Dit doen we niet vaak, maar wanneer we efficiënter op een hoger tempo willen rijden, gaan
           we soms in een enkele rij fietsen: ‘op een lint’.
         </Paragraph>
         <Paragraph>
@@ -85,7 +85,7 @@ const Page: React.FC = () => {
           />
           <div className="col-span-4">
             <ParagraphSmall>
-              Wanneer de voorste renner wil draaien schud degene met zijn linker elleboog.
+              Wanneer de voorste renner wil draaien schudt degene met zijn linker elleboog.
             </ParagraphSmall>
             <ParagraphSmall>
               Degene schuift dan rustig naar rechts en haalt iets druk van zijn pedalen.
@@ -100,7 +100,7 @@ const Page: React.FC = () => {
             <ParagraphSmall>
               Het beste is om je af te laten zaken aan de kant waar de wind het meest vandaan komt.
               De snellere renners zitten dan meer uit de wind, wat de snelheid van de groep
-              vergroot. Wanneer de groep dit expliciet besluit te doen wisselt ook het elleboog
+              vergroot. Wanneer de groep dit expliciet besluit te doen, wisselt ook het elleboog
               signaal, deze wordt dan met rechts gegeven.
             </ParagraphSmall>
           </div>

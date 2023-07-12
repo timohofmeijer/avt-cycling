@@ -63,7 +63,7 @@ const SignalTypeIntro: Record<SignalType, string> = {
   rustig:
     'Wanneer de groep de snelheid moet verlagen, bijvoorbeeld omdat we incompleet zijn door een verkeers vertraging of iemand die het niet bij kan houden dan houden we in tot de groep weer compleet is.',
   compleet:
-    'Wanneer de groep incompleet was en zojuist weer bij elkaar dan is dit het teken dat we weer op tempo kunnen gaan rijden.',
+    'Wanneer de groep incompleet was en zojuist weer bij elkaar, dan is dit het teken dat we weer op tempo kunnen gaan rijden.',
   vrij: 'Wanneer we oversteken en de weg is vrij van direct inkomend verkeer.',
 }
 
