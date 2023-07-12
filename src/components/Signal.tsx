@@ -49,41 +49,41 @@ const SignalTypeIntro: Record<SignalType, string> = {
   tegen:
     'Wanneer er iets of iemand aan de linker voorzijde opduikt waar we rekening mee moeten houden.',
   achter:
-    'Wanneer een auto of fietser de groep vanaf de achterzijde in gaat halen roept de eerste die dit waarneemt ‘achter’.',
+    'Wanneer een auto of fietser de groep vanaf de achterzijde in gaat halen, roept de eerste die dit waarneemt "achter".',
   paaltje:
-    'Wanneer er iets mogelijk gevaarlijks op ons pad komt dan wijzen we het object aan zodat renners achter ons het kunnen ontwijken. ',
+    'Wanneer er iets mogelijk gevaarlijks op ons pad komt, wijzen we het object aan zodat renners achter ons het kunnen ontwijken.',
   rechts:
-    'Wanneer we als groep een afslag nemen wordt dit tijdig geroepen en wijzen we met onze arm naar rechts.',
+    'Wanneer we als groep een afslag nemen, wordt dit tijdig geroepen en wijzen we met onze arm naar rechts.',
   links:
-    'Wanneer we als groep een afslag nemen wordt dit tijdig geroepen en wijzen we met onze arm naar links.',
+    'Wanneer we als groep een afslag nemen, wordt dit tijdig geroepen en wijzen we met onze arm naar links.',
   stop: 'Wanneer er lek is gereden, voor een plaspauze of er is iets anders waarvoor we moeten stoppen.',
   ritsen:
-    'Wanneer de weg te smal is om veilig naast elkaar te rijden gaan we achter elkaar rijden.',
-  twee: 'Wanneer de groep op een lint rijdt en er is weer genoeg ruimte om naast elkaar te rijden, geeft de renner die het “RITSEN” signaal gaf het “TWEE” signaal.',
+    'Wanneer de weg te smal is om veilig naast elkaar te rijden, gaan we achter elkaar rijden.',
+  twee: 'Wanneer de groep op een lint rijdt en er is weer genoeg ruimte om naast elkaar te rijden, geeft de renner die het "RITSEN" signaal gaf het "TWEE" signaal.',
   rustig:
-    'Wanneer de groep de snelheid moet verlagen, bijvoorbeeld omdat we incompleet zijn door een verkeers vertraging of iemand die het niet bij kan houden dan houden we in tot de groep weer compleet is.',
+    'Wanneer de groep de snelheid moet verlagen, bijvoorbeeld omdat we incompleet zijn door een verkeersvertraging of iemand die het niet bij kan houden, dan houden we in tot de groep weer compleet is.',
   compleet:
-    'Wanneer de groep incompleet was en zojuist weer bij elkaar, dan is dit het teken dat we weer op tempo kunnen gaan rijden.',
-  vrij: 'Wanneer we oversteken en de weg is vrij van direct inkomend verkeer.',
+    'Wanneer de groep incompleet was en zojuist weer bij elkaar is, dan is dit het teken dat we weer op tempo kunnen gaan rijden.',
+  vrij: 'Wanneer we oversteken en de weg vrij is van direct inkomend verkeer.',
 }
 
 const SignalTypeBody: Record<SignalType, string> = {
   voor: 'Bijvoorbeeld een fietser met een lagere snelheid, een wandelaar of een geparkeerde auto.',
   tegen: 'Meestal een tegenligger maar mogelijk ook een object zoals een bouwcontainer.',
   achter:
-    'Dit voorkomt schrikreacties en wanneer er te breed wordt gereden kunnen we dit tijdig corrigeren.',
+    'Dit voorkomt schrikreacties en wanneer er te breed wordt gereden, kunnen we dit tijdig corrigeren.',
   paaltje:
-    'Het meest voorkomend zijn autowerende verkeerspaaltjes. Deze worden altijd benoemd en aangewezen omdat je deze midden in de groep makkelijk over hoofd ziet.',
-  links: 'Geen signaal betekend rechtdoor.',
-  rechts: 'Geen signaal betekend rechtdoor.',
-  stop: 'Alleen de voorste renner steeks zijn vuist in de lucht, de rest houdt zijn handen bij de remmen. Ga niet midden op de weg, het fietspad of in een bocht stilstaan, maar kies een overzichtelijke uitrit of berm.',
+    'Het meest voorkomend zijn autowerende verkeerspaaltjes. Deze worden altijd benoemd en aangewezen omdat je deze midden in de groep makkelijk over het hoofd ziet.',
+  links: 'Geen signaal betekent rechtdoor.',
+  rechts: 'Geen signaal betekent rechtdoor.',
+  stop: 'Alleen de voorste renner steekt zijn vuist in de lucht, de rest houdt zijn handen bij de remmen. Ga niet midden op de weg, het fietspad of in een bocht stilstaan, maar kies een overzichtelijke uitrit of berm.',
   ritsen:
-    'De voorste renner steekt 1 vinger in de lucht of een wegkapitein roept ‘RITSEN’. De groep geeft vervolgens het roepsignaal door. We ritsen liever een keer te veel dan te weinig.',
-  twee: 'Dit signaal wordt gegeven door 2 vingers in de lucht te steken (indien degene die het commando geeft vooraan rijdt) of door “TWEE” te roepen.',
-  rustig: 'Dit signaal wordt vaak opgevolgd door het ‘COMPLEET’ signaal.',
+    'De voorste renner steekt 1 vinger in de lucht of een wegkapitein roept "RITSEN". De groep geeft vervolgens het roepsignaal door. We ritsen liever een keer te veel dan te weinig.',
+  twee: 'Dit signaal wordt gegeven door 2 vingers in de lucht te steken (indien degene die het commando geeft vooraan rijdt) of door "TWEE" te roepen.',
+  rustig: 'Dit signaal wordt vaak opgevolgd door het "COMPLEET" signaal.',
   compleet:
     'Dit voorkomt dat iedereen achterom moet gaan zitten kijken en minder oog heeft voor de omgeving.',
-  vrij: 'Kijk altijd zélf of de weg écht vrij is voor je oversteekt!',
+  vrij: 'Kijk altijd zelf of de weg echt vrij is voordat je oversteekt!',
 }
 
 export const Signal: React.FC<{ type: SignalType; modStandalone?: boolean }> = ({

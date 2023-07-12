@@ -20,8 +20,8 @@ const Page: React.FC = () => {
       <div className="flex flex-col w-full">
         <PageTitle>Ritsen</PageTitle>
         <Paragraph>
-          Wanneer we twee aan twee rijden en de weg wordt smaller of er is veel verkeer, dan kan de
-          voorste renner of een wegkapitein het rits signaal geven. We schuiven dan vlot en soepel
+          Wanneer we twee aan twee rijden en de weg smaller wordt of er is veel verkeer, dan kan de
+          voorste renner of een wegkapitein het rits-signaal geven. We schuiven dan vlot en soepel
           in elkaar en vormen één enkele rij renners.
         </Paragraph>
         <Title>Het signaal om te gaan ritsen</Title>
@@ -41,7 +41,7 @@ const Page: React.FC = () => {
               te voegen.
             </Paragraph>
             <Paragraph>
-              De renners die rechts rijden zorgen dat er ruimte onstaat om in te voegen, door
+              De renners die rechts rijden zorgen dat er ruimte ontstaat om in te voegen, door
               vooraan in de rij iets sneller te gaan rijden en achteraan iets langzamer.
             </Paragraph>
           </div>

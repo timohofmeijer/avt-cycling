@@ -20,14 +20,14 @@ const Page: React.FC = () => {
         <PageTitle>Signalen</PageTitle>
         <Paragraph>
           Omdat je minder overzicht hebt wanneer je in een groep rijdt, maken we gebruik van heldere
-          hand en roep signalen zodat we als groep snel kunnen reageren op onze omgeving.
+          hand- en roepsignalen, zodat we als groep snel kunnen reageren op onze omgeving.
         </Paragraph>
         <Paragraph>
           Geef signalen áltijd door, ook als je denkt dat het in een bepaald geval niet nodig is of
           als je met iemand aan het praten bent.
         </Paragraph>
         <Paragraph>
-          We hebben onze signalen hieronder opgesplitst in signalen welke je aandacht vragen en
+          We hebben onze signalen hieronder opgesplitst in signalen die je aandacht vragen en
           signalen waarbij we als groep moeten manoeuvreren.
         </Paragraph>
         <LinkDown hash="#aandacht">Aandacht signalen</LinkDown>
