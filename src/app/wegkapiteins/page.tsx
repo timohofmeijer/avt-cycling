@@ -18,8 +18,8 @@ const Page: React.FC = () => {
         <PageTitle>Wegkapiteins</PageTitle>
         <Paragraph>
           Wij zullen proberen de afspraken, zoals op deze site omschreven, consistent na te leven en
-          hiermee onze ritten samen zo voorspelbaar en veilig mogelijk te maken. Met julle
-          medewerking creëren we zo meer ruimte om samen lekker te rijden, trainen en koersen! 🙏🏼
+          hiermee onze ritten zo voorspelbaar en veilig mogelijk te maken. Zo kunnen we ons samen
+          vooral bezig houden met lekker rijden, trainen en koersen! 🙏🏼
         </Paragraph>
         <div className="mt-8">
           <Captain name="Albert Jan Kerssen" image="albert-jan.jpeg" stravaId="43085263" />

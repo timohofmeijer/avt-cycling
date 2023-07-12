@@ -21,8 +21,7 @@ export default function Home() {
       </p> */}
         <p className="mb-4 text-lg">
           Op deze site vind je een overzicht van de afspraken en signalen die we hanteren tijdens de
-          wielren groepsritten van AVTriathlon. Omdat het net iets te veel informatie is om voor een
-          rit uit te leggen, hebben we het hier netjes op een rijtje gezet.
+          wielren groepsritten van AVTriathlon.
         </p>
         <Title>Wat willen we hier mee bereiken</Title>
         <Paragraph>
