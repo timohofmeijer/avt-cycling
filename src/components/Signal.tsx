@@ -12,6 +12,7 @@ type SignalType =
   | 'twee'
   | 'rustig'
   | 'compleet'
+  | 'vrij'
 
 const SignalTypeTitles: Record<SignalType, string> = {
   voor: 'Obstakel rechter voorzijde',
@@ -25,6 +26,7 @@ const SignalTypeTitles: Record<SignalType, string> = {
   twee: 'Twee aan twee gaan rijden',
   rustig: 'Vaart minderen',
   compleet: 'De groep is weer compleet',
+  vrij: 'De oversteek is vrij van verkeer',
 }
 
 const SignalTypeShout: Record<SignalType, string> = {
@@ -39,6 +41,7 @@ const SignalTypeShout: Record<SignalType, string> = {
   twee: 'Twee',
   rustig: 'Rustig',
   compleet: 'Compleet',
+  vrij: 'Vrij',
 }
 
 const SignalTypeIntro: Record<SignalType, string> = {
@@ -61,6 +64,7 @@ const SignalTypeIntro: Record<SignalType, string> = {
     'Wanneer de groep de snelheid moet verlagen, bijvoorbeeld omdat we incompleet zijn door een verkeers vertraging of iemand die het niet bij kan houden dan houden we in tot de groep weer compleet is.',
   compleet:
     'Wanneer de groep incompleet was en zojuist weer bij elkaar dan is dit het teken dat we weer op tempo kunnen gaan rijden.',
+  vrij: 'Wanneer we oversteken en de weg is vrij van direct inkomend verkeer.',
 }
 
 const SignalTypeBody: Record<SignalType, string> = {
@@ -78,6 +82,7 @@ const SignalTypeBody: Record<SignalType, string> = {
   rustig: 'Dit signaal wordt vaak opgevolgd door het ‘COMPLEET’ signaal.',
   compleet:
     'Dit voorkomt dat iedereen achterom moet gaan zitten kijken en minder oog heeft voor de omgeving.',
+  vrij: 'Kijk altijd zélf of de weg écht vrij is voor je oversteekt!',
 }
 
 export const Signal: React.FC<{ type: SignalType }> = ({ type }) => {

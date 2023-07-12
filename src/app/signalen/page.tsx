@@ -48,6 +48,7 @@ const Page: React.FC = () => {
           <Signal type="twee" />
           <Signal type="rustig" />
           <Signal type="compleet" />
+          <Signal type="vrij" />
         </div>
       </div>
     </PageAnimation>
