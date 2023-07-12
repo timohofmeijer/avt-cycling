@@ -22,7 +22,7 @@ const Page: React.FC = () => {
           onderstaande even door zodat je een idee hebt wat we van elkaar mogen verwachten.
         </Paragraph>
         <LinkDown hash="#materiaal">Materiaal check</LinkDown>
-        <LinkDown hash="#verantwoordelijk">Zelf verantwoordelijk</LinkDown>
+        {/* <LinkDown hash="#verantwoordelijk">Zelf verantwoordelijk</LinkDown> */}
         <LinkDown hash="#algemeen">Algemene gedragsregels</LinkDown>
         <LinkDown hash="#tehard">Gaat het te hard geef het aan!</LinkDown>
         <LinkDown hash="#etendrinken">Eet en drink voldoende</LinkDown>
