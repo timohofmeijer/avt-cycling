@@ -48,19 +48,19 @@ const Page: React.FC = () => {
           <div className="col-span-4">
             <ParagraphSmall>
               Wanneer één van de voorste renners wil draaien, versnelt de linkerrenner voorbij
-              degene naast hem of haar, schuift dan rustig naar rechts en laat een beetje druk van
-              zijn pedalen af.
+              degene naast hem of haar, schuift dan rustig naar rechts en vermindert de druk op zijn
+              pedalen een beetje.
             </ParagraphSmall>
             <ParagraphSmall>
-              De hele linkerrij versnelt een beetje, zodat ze 2 plaatsen opschuiven.
+              De hele linkerrij versnelt een beetje, zodat iedereen 2 plaatsen opschuiven.
             </ParagraphSmall>
             <ParagraphSmall>
               De renner die rechts achteraan rijdt, versnelt ook een beetje, schuift naar de
-              linkerrij en gaat dan 2 plaatsen naar voren.
+              linkerrij en schuift vervolgens ook 2 plaatsen naar voren.
             </ParagraphSmall>
             <ParagraphSmall>
               Probeer de rotatie zo vloeiend mogelijk te maken, zonder gaten tussen renners te laten
-              ontstaan.
+              ontstaan. Op deze manier rijdt de groep efficiënter en dus ook sneller.
             </ParagraphSmall>
           </div>
         </div>
@@ -89,7 +89,8 @@ const Page: React.FC = () => {
               Wanneer de voorste renner wil draaien, schudt degene met zijn linkerelleboog.
             </ParagraphSmall>
             <ParagraphSmall>
-              Die persoon schuift dan rustig naar rechts en vermindert iets de druk op zijn pedalen.
+              Die persoon schuift dan rustig naar rechts en vermindert de druk op zijn pedalen een
+              beetje.
             </ParagraphSmall>
             <ParagraphSmall>
               Die persoon laat zich afzakken naar de achterkant van de groep.
