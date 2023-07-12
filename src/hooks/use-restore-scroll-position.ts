@@ -25,9 +25,17 @@ export const useRestoreScrollPosition = () => {
   })
 
   // Restore scroll position when returning to this path if it is defined.
+  // Scroll to element with #hash id when defined.
   useEffect(() => {
     if (path in sessionStorage) {
       document.documentElement.scrollTop = Number(sessionStorage.getItem(path))
+    } else if (window.location.hash) {
+      // DISABLED for now since use-case (link from ‘risten’ to a specific signal on the signal page) got superceded by another solution (embed signal on ‘ritsen’ page).
+      // const el = document.querySelector(location.hash)
+      // if (el) {
+      //   el?.scrollIntoView()
+      //   history.replaceState(null, '', `${location.pathname}${location.search}`)
+      // }
     }
   }, [path])
 }

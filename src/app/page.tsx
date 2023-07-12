@@ -37,8 +37,8 @@ export default function Home() {
         <section>
           <Title>Ben je nieuw?</Title>
           <Paragraph>
-            Leuk dat je mee komt rijden! Lees het volgende even door, dan heb je alvast een idee wat
-            we van elkaar mogen verwachten.
+            Leuk dat je mee komt rijden! Lees het volgende even door, dan heb je een idee wat we van
+            elkaar mogen verwachten.
           </Paragraph>
           <LinkButton href="/nieuwe-deelnemers">Nieuwe renners</LinkButton>
         </section>

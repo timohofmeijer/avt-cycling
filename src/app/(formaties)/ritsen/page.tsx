@@ -1,10 +1,12 @@
 import { Metadata } from 'next'
 import Image from 'next/image'
+import Link from 'next/link'
 import { PageTitle } from '@/components/PageTitle'
 import { PageAnimation } from '@/components/PageAnimation'
 import { PageHeaderContent } from '@/components/PageHeaderContent'
 import { Paragraph } from '@/components/Paragraph'
-import { ParagraphSmall } from '@/components/ParagraphSmall'
+import { Signal } from '@/components/Signal'
+import { Title } from '@/components/Title'
 
 export const metadata: Metadata = {
   title: 'Ritsen – AVT Wielrennen',
@@ -18,44 +20,34 @@ const Page: React.FC = () => {
       <div className="flex flex-col w-full">
         <PageTitle>Ritsen</PageTitle>
         <Paragraph>
-          Wanneer we twee aan twee rijden en de weg wordt smaller of er is veel verkeer, dan zal een
-          wegkapitein het rits signaal geven. We schuiven dan vlot en soepel in elkaar en vormen één
-          enkele rij renners.
+          Wanneer we twee aan twee rijden en de weg wordt smaller of er is veel verkeer, dan kan de
+          voorste renner of een wegkapitein het rits signaal geven. We schuiven dan vlot en soepel
+          in elkaar en vormen één enkele rij renners.
         </Paragraph>
-        <Paragraph>Ritsen werkt als volgt:</Paragraph>
-        <div className="flex">
+        <Title>Het signaal ritsen wordt gegeven</Title>
+        <Signal type="ritsen" modStandalone={true} />
+        <Title>Vervolgens schuiven we als volgt in elkaar</Title>
+        <div className="flex gap-6">
           <Image
             src="/formatie-ritsen.png"
             alt="Ritsen"
             width={430}
             height={2127}
-            className="flex-grow-0 flex-shrink-0 object-contain object-top w-1/3"
+            className="flex-grow-0 flex-shrink-0 object-contain object-top w-1/5"
           />
-          <div className="">
-            <ParagraphSmall>
-              Waneer dit signaal vanaf de voorkant van de groep komt gebeurt dit middels het
-              opsteken van één vinger. De rest van de groep roept het signaal door naar de
-              achterkant van de groep door “RITSEN” te roepen.
-            </ParagraphSmall>
-            <ParagraphSmall>
-              Wanneer het signaal van achter in de groep wordt gegeven roept de wegkapitein “RISTEN”
-              en wordt dit door de groep doorgegeven naar de voorzijde van de groep.
-            </ParagraphSmall>
-            <ParagraphSmall>
-              De renners die links rijden laten zich iets afzakken om <b>ACHTER</b> hun buurmens in
+          <div className="mt-6">
+            <Paragraph>
+              De renners die links rijden laten zich afzakken om <b>achter</b> hun buurman/vrouw in
               te voegen.
-            </ParagraphSmall>
-            <ParagraphSmall>
-              Waneer dit signaal vanaf de voorkant van de groep komt gebeurt dit middels het
-              opsteken van 2 vingers. De rest van de groep roept het signaal door naar de achterkant
-              van de groep door “TWEE” te roepen.
-            </ParagraphSmall>
-            <ParagraphSmall>
-              Wanneer het signaal van achter in de groep wordt gegeven roept de wegkapitein “TWEE”
-              en wordt dit door de groep doorgegeven naar de voorzijde van de groep.
-            </ParagraphSmall>
+            </Paragraph>
+            <Paragraph>
+              De renners die rechts rijden zorgen dat er ruimte onstaat om in te voegen, door
+              vooraan in de rij iets sneller te gaan rijden en achteraan iets langzamer.
+            </Paragraph>
           </div>
         </div>
+        <Title>Weer naast elkaar gaan rijden</Title>
+        <Signal type="twee" modStandalone={true} />
       </div>
     </PageAnimation>
   )

@@ -58,8 +58,8 @@ const SignalTypeIntro: Record<SignalType, string> = {
     'Wanneer we als groep een afslag nemen wordt dit tijdig geroepen en wijzen we met onze arm naar links.',
   stop: 'Wanneer er lek is gereden, voor een plaspauze of er is iets anders waarvoor we moeten stoppen.',
   ritsen:
-    'Wanneer de weg dermate smal is dat het gevaarlijk is of dat we mensen laten schrikken, gaan we achter elkaar rijden.',
-  twee: 'Wanneer de groep op een lint rijdt en er is weer genoeg ruimt om naast elkaar te rijden steekt te voorste wegkapitein 2 vingers in de lucht en wordt het signaal naar achteren geroepen.',
+    'Wanneer de weg te smal is om veilig naast elkaar te rijden gaan we achter elkaar rijden.',
+  twee: 'Wanneer de groep op een lint rijdt en er is weer genoeg ruimte om naast elkaar te rijden, geeft de renner die het “RITSEN” signaal gaf het “TWEE” signaal.',
   rustig:
     'Wanneer de groep de snelheid moet verlagen, bijvoorbeeld omdat we incompleet zijn door een verkeers vertraging of iemand die het niet bij kan houden dan houden we in tot de groep weer compleet is.',
   compleet:
@@ -76,21 +76,28 @@ const SignalTypeBody: Record<SignalType, string> = {
     'Het meest voorkomend zijn autowerende verkeerspaaltjes. Deze worden altijd benoemd en aangewezen omdat je deze midden in de groep makkelijk over hoofd ziet.',
   links: 'Geen signaal betekend rechtdoor.',
   rechts: 'Geen signaal betekend rechtdoor.',
-  stop: 'Alleen de voorste renner steeks zijn hand op! De rest houd zijn handen bij de remmen. Ga niet midden op de weg, het fietspad of in een bocht stilstaan, maar kies een overzichtelijke uitrit of berm.',
-  ritsen: 'Ook wel op een lint genoemd. Laat je achter degene waar je naast fietst zakken.',
-  twee: 'Laat dit signaal in princiepe over aan de wegkapiteins.',
+  stop: 'Alleen de voorste renner steeks zijn vuist in de lucht, de rest houdt zijn handen bij de remmen. Ga niet midden op de weg, het fietspad of in een bocht stilstaan, maar kies een overzichtelijke uitrit of berm.',
+  ritsen:
+    'De voorste renner steekt 1 vinger in de lucht of een wegkapitein roept ‘RITSEN’. De groep geeft vervolgens het roepsignaal door. We ritsen liever een keer te veel dan te weinig.',
+  twee: 'Dit signaal wordt gegeven door 2 vingers in de lucht te steken (indien degene die het commando geeft vooraan rijdt) of door “TWEE” te roepen.',
   rustig: 'Dit signaal wordt vaak opgevolgd door het ‘COMPLEET’ signaal.',
   compleet:
     'Dit voorkomt dat iedereen achterom moet gaan zitten kijken en minder oog heeft voor de omgeving.',
   vrij: 'Kijk altijd zélf of de weg écht vrij is voor je oversteekt!',
 }
 
-export const Signal: React.FC<{ type: SignalType }> = ({ type }) => {
+export const Signal: React.FC<{ type: SignalType; modStandalone?: boolean }> = ({
+  type,
+  modStandalone,
+}) => {
   return (
-    <div className="flex flex-col gap-1 p-0 mt-2 mb-8 rounded-lg justify-items-center bg-zinc-100">
-      <div className="self-start px-2 mb-6 rounded-md text-l text-zinc-50 bg-zinc-950">
-        {SignalTypeTitles[type]}
-      </div>
+    <div className="relative flex flex-col gap-1 p-0 mt-2 mb-8 rounded-lg justify-items-center bg-zinc-100">
+      <div className="absolute -top-24" id={type} />
+      {!modStandalone && (
+        <div className="self-start px-2 mb-6 rounded-md text-l text-zinc-50 bg-zinc-950">
+          {SignalTypeTitles[type]}
+        </div>
+      )}
       <div className="relative grid grid-cols-6 gap-8">
         {SignalHands[type]}
         <svg
@@ -135,7 +142,7 @@ export const Signal: React.FC<{ type: SignalType }> = ({ type }) => {
           <div className="mt-4 text-sm">{SignalTypeIntro[type]}</div>
           <div className="mt-2 text-xs text-zinc-500">
             {SignalTypeBody[type]}
-            {type === 'ritsen' && (
+            {type === 'ritsen' && !modStandalone && (
               <>
                 {' '}
                 <Link href="/ritsen" className="text-blue-600 underline">
@@ -224,16 +231,13 @@ const SignalHands: Partial<Record<SignalType, React.ReactNode>> = {
   ),
   stop: (
     <svg
-      className="absolute z-10 w-12 -top-5 left-1 fill-blue-600"
+      className="absolute z-10 w-12 -top-5 left-3 fill-blue-600"
       xmlns="http://www.w3.org/2000/svg"
       width="100"
       height="100"
       viewBox="0 0 100 100"
     >
-      <path
-        d="M45.9934096,90 C50.9827486,90 55.2539252,89.0502163 58.8069393,87.1506488 C62.3599535,85.2510813 65.3925179,82.3959387 67.9046327,78.585221 C68.9978678,77.1142145 70.0009692,75.4868411 70.9139368,73.7031009 C71.8269044,71.9193608 72.6468308,70.0921853 73.3737158,68.2215747 C74.1006009,66.350964 74.7460748,64.5585368 75.3101376,62.8442929 C75.8742004,61.1300491 76.3597596,59.6127117 76.7668153,58.2922806 C77.1855011,57.0065978 77.6187246,55.6543142 78.0664858,54.23543 C78.5142469,52.8165457 78.9154875,51.4990103 79.2702074,50.2828238 C79.6249273,49.0666373 79.8488079,48.1052709 79.9418492,47.3987244 C80.1163016,46.2057034 79.8982361,45.1777362 79.2876526,44.314823 C78.6770692,43.4519097 77.7960845,42.9335826 76.6446986,42.7598417 C75.3304904,42.5513525 74.1994573,42.7945898 73.2515991,43.4895536 C72.303741,44.1845173 71.4925373,45.2501283 70.817988,46.6863866 L65.8635394,57.5625687 C65.6774569,58.0258779 65.4797441,58.3444029 65.2704012,58.5181438 C65.0610583,58.6918848 64.8400853,58.7787552 64.6074821,58.7787552 C64.3399884,58.7787552 64.1161078,58.6860934 63.9358403,58.5007697 C63.7555728,58.3154461 63.665439,57.9737556 63.665439,57.4756983 L63.665439,20.2603915 C63.665439,18.9862913 63.2409382,17.923576 62.3919364,17.0722454 C61.5429347,16.2209149 60.478775,15.7952496 59.1994573,15.7952496 C57.9433999,15.7952496 56.8879628,16.2238106 56.033146,17.0809325 C55.1783291,17.9380544 54.7509207,18.9978741 54.7509207,20.2603915 L54.7509207,48.05894 C54.3322349,47.9083645 53.9077341,47.7722674 53.4774181,47.6506488 C53.0471022,47.5290301 52.599341,47.4218899 52.1341345,47.3292281 L52.1341345,15.4651419 C52.1341345,14.179459 51.7096336,13.113848 50.8606319,12.2683088 C50.0116302,11.4227696 48.9474704,11 47.6681527,11 C46.388835,11 45.3246753,11.4227696 44.4756736,12.2683088 C43.6266718,13.113848 43.202171,14.179459 43.202171,15.4651419 L43.202171,46.9643721 C42.7602248,46.9991203 42.3095561,47.0425555 41.8501648,47.0946778 C41.3907734,47.1468001 40.9401047,47.2076094 40.4981586,47.2771058 L40.4981586,18.2797449 C40.4981586,17.0288102 40.0707501,15.9747819 39.2159333,15.11766 C38.3611165,14.2605381 37.2998643,13.8319771 36.0321768,13.8319771 C34.7761194,13.8319771 33.7177748,14.2605381 32.8571429,15.11766 C31.996511,15.9747819 31.566195,17.0288102 31.566195,18.2797449 L31.566195,49.6921047 C31.1009886,49.9005938 30.6474123,50.1206656 30.2054662,50.3523202 C29.7635201,50.5839748 29.3448343,50.8156294 28.9494088,51.0472839 L28.9494088,29.155927 C28.9494088,27.8818268 28.5220004,26.8191115 27.6671836,25.967781 C26.8123667,25.1164504 25.7569296,24.6907851 24.5008723,24.6907851 C23.2215546,24.6907851 22.1515798,25.1164504 21.2909479,25.967781 C20.430316,26.8191115 20,27.8818268 20,29.155927 L20,64.3037167 C20,68.3229235 20.6571041,71.9164651 21.9713123,75.0843413 C23.2855204,78.2522176 25.1201783,80.9480976 27.4752859,83.1719815 C29.8303935,85.3958654 32.5838341,87.0898395 35.7356077,88.2539037 C38.8873813,89.4179679 42.3066486,90 45.9934096,90 Z"
-        transform="matrix(-1 0 0 1 100 0)"
-      />
+      <path d="M49.9334651,83 C67.0641887,83 77.0352445,72.1723973 77.0352445,53.8748806 L77.0352445,46.1786055 C77.0352445,39.3123209 73.6990642,34.5210124 69.4257546,34.5210124 C68.1887439,34.5210124 67.4765256,35.2755492 67.4765256,36.4450812 L67.4765256,39.6141356 C67.4765256,40.7836676 66.9517332,41.4250239 66.2770001,41.4250239 C65.5647819,41.4250239 65.0399894,40.8213945 65.0399894,39.6141356 L65.0399894,37.5768863 C65.0399894,33.2760267 62.2660867,30.2578797 58.405114,30.2578797 C56.4933702,30.2578797 55.4812706,31.2387775 55.4812706,32.9364852 L55.4812706,37.3127985 C55.4812706,38.5200573 54.9939634,39.0859599 54.3192303,39.0859599 C53.5695268,39.0859599 53.0447344,38.5577841 53.0447344,37.3127985 L53.0447344,33.2760267 C53.0447344,28.6733524 50.4207724,25.9947469 46.4473441,25.9947469 C44.6105707,25.9947469 43.5235007,26.9756447 43.5235007,28.6733524 L43.5235007,37.3127985 C43.5235007,38.4823305 43.0361935,39.0859599 42.3989456,39.0859599 C41.6492421,39.0859599 41.1244497,38.5200573 41.1244497,37.3127985 L41.1244497,32.9364852 C41.1244497,28.6733524 38.7466964,26.3176775 35.176407,26.3176775 C32.0782888,26.3176775 31.0784236,27.7798454 31.0784236,30.2578797 C31.0784236,38.7021685 31.0784236,43.2828753 31.0784236,44 C31.0784236,45.0756871 29.1845939,45.0756871 29.1845939,44.0227605 C29.1845939,43.3208095 29.170332,41.6348513 29.1418082,38.964886 C21.6643093,43.3789261 21.5012079,50 23.6009247,61.4178722 C26.1916518,75.5057676 36.5512587,83 49.9334651,83 Z" />
     </svg>
   ),
   ritsen: (
