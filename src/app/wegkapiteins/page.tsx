@@ -23,7 +23,7 @@ const Page: React.FC = () => {
         </Paragraph>
         <div className="mt-8">
           <Captain name="Albert Jan Kerssen" image="albert-jan.jpeg" stravaId="43085263" />
-          <Captain name="Arie Kingma" image="arie.jpeg" stravaId="31785656" />
+          {/* <Captain name="Arie Kingma" image="arie.jpeg" stravaId="31785656" /> */}
           {/* <User name="Christa" image="" stravaId="" /> */}
           <Captain name="Frank Zaal" image="frank.jpeg" stravaId="2211334" />
           <Captain name="Gerjan van Roekel" image="gerjan.jpeg" stravaId="586548" />
