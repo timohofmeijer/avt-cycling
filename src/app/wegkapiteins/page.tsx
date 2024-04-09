@@ -30,7 +30,7 @@ const Page: React.FC = () => {
           <Captain name="Gerjan van Roekel" image="gerjan.jpeg" stravaId="586548" />
           <Captain name="Luuc Rutgers" image="luuc.jpeg" stravaId="7239918" />
           <Captain name="Mark Wossink" image="mark.jpeg" stravaId="44558029" />
-          <Captain name="Raymond Kievit" image="raymond.jpeg" stravaId="9871152" />
+          {/* <Captain name="Raymond Kievit" image="raymond.jpeg" stravaId="9871152" /> */}
           <Captain name="Robbert van der Kieft" image="blank.png" stravaId="" />
           <Captain name="Sander Teeuwisse" image="blank.png" stravaId="48252858" />
           <Captain name="Sjoerd Roelofs" image="blank.png" stravaId="32433862" />
