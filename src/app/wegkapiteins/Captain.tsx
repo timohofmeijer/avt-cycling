@@ -46,7 +46,7 @@ export const Captain: React.FC<{ name: string; image: string; stravaId: string }
           <a
             target="_blank"
             className={`flex items-center relative text-xs font-bold text-white pl-1 mt-1 rounded ${
-              stravaId ? 'bg-blue-600 pointer-events-auto' : 'bg-zinc-400'
+              stravaId ? 'bg-blue-700 pointer-events-auto' : 'bg-zinc-400'
             }`}
             href={`https://www.strava.com/athletes/${stravaId}`}
           >

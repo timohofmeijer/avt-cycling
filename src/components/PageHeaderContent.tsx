@@ -39,7 +39,7 @@ export const PageHeaderContent: React.FC<{ page: PageType }> = ({ page }) => {
               transition={{ delay: 0.35 }}
             >
               <Link
-                className="absolute bottom-0 flex items-center h-8 gap-1 text-blue-600 justify-items-center"
+                className="absolute bottom-0 flex items-center h-8 gap-1 text-blue-700 justify-items-center"
                 href="/"
               >
                 <BsChevronLeft size={18} /> Terug

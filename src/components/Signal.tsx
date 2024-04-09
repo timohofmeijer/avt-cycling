@@ -114,7 +114,7 @@ export const Signal: React.FC<{ type: SignalType; modStandalone?: boolean }> = (
           />
         </svg>
         <div className="flex flex-col col-span-5">
-          <div className="relative self-start px-2 py-1 font-bold text-white bg-blue-600 rounded-full text-m -left-2">
+          <div className="relative self-start px-2 py-1 font-bold text-white bg-blue-700 rounded-full text-m -left-2">
             {SignalTypeShout[type]}!
             <svg
               className="absolute -left-3 -bottom-2 w-7 h-7"
@@ -129,7 +129,7 @@ export const Signal: React.FC<{ type: SignalType; modStandalone?: boolean }> = (
                 <g
                   id="Speech"
                   transform="translate(0.000000, -62.000000)"
-                  className="fill-blue-600"
+                  className="fill-blue-700"
                 >
                   <path
                     d="M21.9884287,62.5808773 C20.5115251,76.1012476 13.1820488,82.8614328 1.0658141e-14,82.8614328 C18.5015814,82.8614328 32.2438903,80.2409552 41.2269267,75 L21.9884287,62.5808773 Z"
@@ -145,7 +145,7 @@ export const Signal: React.FC<{ type: SignalType; modStandalone?: boolean }> = (
             {type === 'ritsen' && !modStandalone && (
               <>
                 {' '}
-                <Link href="/ritsen" className="text-blue-600 underline">
+                <Link href="/ritsen" className="text-blue-700 underline">
                   Zie hier hoe dit werkt
                 </Link>
                 .
@@ -161,7 +161,7 @@ export const Signal: React.FC<{ type: SignalType; modStandalone?: boolean }> = (
 const SignalHands: Partial<Record<SignalType, React.ReactNode>> = {
   voor: (
     <svg
-      className="absolute z-10 w-12 top-16 left-1 fill-blue-600"
+      className="absolute z-10 w-12 top-16 left-1 fill-blue-700"
       xmlns="http://www.w3.org/2000/svg"
       width="100"
       height="100"
@@ -175,7 +175,7 @@ const SignalHands: Partial<Record<SignalType, React.ReactNode>> = {
   ),
   tegen: (
     <svg
-      className="absolute z-10 w-12 top-16 -left-3 fill-blue-600"
+      className="absolute z-10 w-12 top-16 -left-3 fill-blue-700"
       xmlns="http://www.w3.org/2000/svg"
       width="100"
       height="100"
@@ -189,7 +189,7 @@ const SignalHands: Partial<Record<SignalType, React.ReactNode>> = {
   ),
   paaltje: (
     <svg
-      className="absolute z-10 w-12 -top-5 -left-5 fill-blue-600"
+      className="absolute z-10 w-12 -top-5 -left-5 fill-blue-700"
       xmlns="http://www.w3.org/2000/svg"
       width="100"
       height="100"
@@ -203,7 +203,7 @@ const SignalHands: Partial<Record<SignalType, React.ReactNode>> = {
   ),
   links: (
     <svg
-      className="absolute z-10 w-12 top-1 -left-5 fill-blue-600"
+      className="absolute z-10 w-12 top-1 -left-5 fill-blue-700"
       xmlns="http://www.w3.org/2000/svg"
       width="100"
       height="100"
@@ -217,7 +217,7 @@ const SignalHands: Partial<Record<SignalType, React.ReactNode>> = {
   ),
   rechts: (
     <svg
-      className="absolute z-10 w-12 top-1 left-4 fill-blue-600"
+      className="absolute z-10 w-12 top-1 left-4 fill-blue-700"
       xmlns="http://www.w3.org/2000/svg"
       width="100"
       height="100"
@@ -231,7 +231,7 @@ const SignalHands: Partial<Record<SignalType, React.ReactNode>> = {
   ),
   stop: (
     <svg
-      className="absolute z-10 w-12 -top-5 left-3 fill-blue-600"
+      className="absolute z-10 w-12 -top-5 left-3 fill-blue-700"
       xmlns="http://www.w3.org/2000/svg"
       width="100"
       height="100"
