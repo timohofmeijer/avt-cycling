@@ -25,6 +25,7 @@ const Page: React.FC = () => {
           <Captain name="Albert Jan Kerssen" image="albert-jan.jpeg" stravaId="43085263" />
           {/* <Captain name="Arie Kingma" image="arie.jpeg" stravaId="31785656" /> */}
           {/* <User name="Christa" image="" stravaId="" /> */}
+          <Captain name="Djoeke Donkers" image="djoeke.png" stravaId="1049189" />
           <Captain name="Frank Zaal" image="frank.jpeg" stravaId="2211334" />
           <Captain name="Gerjan van Roekel" image="gerjan.jpeg" stravaId="586548" />
           <Captain name="Luuc Rutgers" image="luuc.jpeg" stravaId="7239918" />
@@ -34,7 +35,6 @@ const Page: React.FC = () => {
           <Captain name="Sander Teeuwisse" image="blank.png" stravaId="48252858" />
           <Captain name="Sjoerd Roelofs" image="blank.png" stravaId="32433862" />
           <Captain name="Timo" image="timo.jpeg" stravaId="2019517" />
-          <Captain name="Djoeke Donkers" image="djoeke.png" stravaId="1049189" />
         </div>
       </div>
     </PageAnimation>
