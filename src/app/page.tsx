@@ -7,7 +7,8 @@ import { Paragraph } from '@/components/Paragraph'
 
 export const metadata: Metadata = {
   title: 'AVT Wielrennen',
-  description: '...',
+  description:
+    'Op deze site vind je een overzicht van de afspraken en signalen die we hanteren tijdens de wielrengroepsritten van AVTriathlon.',
 }
 
 export default function Home() {
