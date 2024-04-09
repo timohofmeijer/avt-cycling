@@ -40,7 +40,7 @@ const Page: React.FC = () => {
         <div className="grid grid-cols-6">
           <Image
             className="col-span-2"
-            src="/formatie-draaien-sociaal.png"
+            src="/formatie-draaien-sociaal-700.png"
             alt="Sociaal draaien"
             width={500}
             height={1976}
@@ -78,7 +78,7 @@ const Page: React.FC = () => {
         <div className="grid w-full grid-cols-6">
           <Image
             className="col-span-2"
-            src="/formatie-draaien-lint.png"
+            src="/formatie-draaien-lint-700.png"
             alt="Draaien in een lint"
             width={500}
             height={1866}

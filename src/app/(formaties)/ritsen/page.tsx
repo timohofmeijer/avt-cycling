@@ -29,7 +29,7 @@ const Page: React.FC = () => {
         <Title>Vervolgens schuiven we als volgt in elkaar</Title>
         <div className="flex gap-6">
           <Image
-            src="/formatie-ritsen.png"
+            src="/formatie-ritsen-700.png"
             alt="Ritsen"
             width={430}
             height={2127}
