@@ -18,7 +18,7 @@ const Page: React.FC = () => {
         <PageTitle>Kalender</PageTitle>
         <p className="mb-8 max-w-2xl">
           In het volgende overzicht vind je alle wielrenactiviteiten die komend seizoen op de
-          planning staan. Triatlonwedstrijden zijn gemarkeerd met een blauwe achtergrond.
+          planning staan.
         </p>
         <Calendar events={calendarEvents} />
       </div>

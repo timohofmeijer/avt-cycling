@@ -16,6 +16,9 @@ export default function Home() {
     <PageAnimation direction="left">
       <PageHeaderContent page="home" />
       <div>
+        <div className="flex items-center justify-center px-4 py-2 bg-zinc-200/60 border border-zinc-300/40 rounded-lg mb-8">
+          <LinkButton href="/kalender">Bekijk de kalender voor 2025!</LinkButton>
+        </div>
         {/* <p className="mb-4">
         Welkom op de website van de wielrengroep van AVTriathlon! Deze website is in het leven geroepen
         om de afspraken en signalen van onze groepsritten helder te kunnen communiceren.
