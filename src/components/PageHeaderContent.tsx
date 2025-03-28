@@ -5,7 +5,7 @@ import Link from 'next/link'
 import { BsChevronLeft } from 'react-icons/bs'
 import { motion } from 'framer-motion'
 
-type PageType = 'home' | 'signalen' | 'draaien' | 'ritsen' | 'nieuw' | 'wegkapiteins'
+type PageType = 'home' | 'signalen' | 'draaien' | 'ritsen' | 'nieuw' | 'wegkapiteins' | 'kalender'
 
 export const PageHeaderContent: React.FC<{ page: PageType }> = ({ page }) => {
   const [isCSR, setCSR] = useState(false)
@@ -59,4 +59,5 @@ const pageTitles: Record<PageType, string> = {
   ritsen: 'Ritsen',
   nieuw: 'Nieuwe deelnemers',
   wegkapiteins: 'Wegkapiteins',
+  kalender: 'Kalender',
 }
