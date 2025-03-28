@@ -7,10 +7,13 @@ function formatSunsetTime(date: string): string {
     latitude: 52.15517, // Amersfoort
     longitude: 5.3872, // Amersfoort
   })
-  return sunsetTime.toLocaleTimeString('nl-NL', {
+
+  // Convert to Netherlands timezone explicitly
+  return new Date(sunsetTime).toLocaleTimeString('nl-NL', {
     hour: '2-digit',
     minute: '2-digit',
     hour12: false,
+    timeZone: 'Europe/Amsterdam',
   })
 }
 
