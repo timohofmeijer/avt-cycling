@@ -34,7 +34,7 @@ const Page: React.FC = () => {
           <Captain name="Peter Kuin" image="peter_k.jpeg" stravaId="1823509" />
           <Captain name="Peter van Dartel" image="peter_d.jpeg" stravaId="12537716" />
           {/* <Captain name="Raymond Kievit" image="raymond.jpeg" stravaId="9871152" /> */}
-          <Captain name="Robbert van der Kieft" image="blank.png" stravaId="" />
+          <Captain name="Robert van der Kieft" image="blank.png" stravaId="" />
           <Captain name="Sander Teeuwisse" image="sander.jpeg" stravaId="48252858" />
           <Captain name="Sjoerd Roelofs" image="blank.png" stravaId="32433862" />
           <Captain name="Timo" image="timo.jpeg" stravaId="2019517" />
