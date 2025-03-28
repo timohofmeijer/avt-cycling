@@ -1,4 +1,11 @@
-export type EventType = 'training' | 'fastride' | 'groupride' | 'triathlon' | 'event' | 'cancelled'
+export type EventType =
+  | 'training'
+  | 'fastride'
+  | 'groupride'
+  | 'triathlon'
+  | 'event'
+  | 'cancelled'
+  | 'baan'
 
 export type CalendarEvent = {
   date: string

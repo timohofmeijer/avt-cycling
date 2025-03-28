@@ -21,6 +21,8 @@ const getEventTypeColors = (type: EventType): { bg: string; border: string; text
       return { bg: 'bg-yellow-50', border: 'border-yellow-200', text: 'text-yellow-500/30' }
     case 'cancelled':
       return { bg: 'bg-gray-50', border: 'border-gray-200', text: 'text-gray-500/30' }
+    case 'baan':
+      return { bg: 'bg-green-50', border: 'border-green-200', text: 'text-green-500/30' }
     default:
       return { bg: 'bg-orange-50', border: 'border-orange-200', text: 'text-orange-500/30' }
   }
