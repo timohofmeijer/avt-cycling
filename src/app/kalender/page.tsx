@@ -11,17 +11,16 @@ export const metadata: Metadata = {
 }
 
 const Page: React.FC = () => {
-  const nonTriEvents = calendarEvents.filter((event) => !event.isTriEvent)
   return (
     <PageAnimation>
       <PageHeaderContent page="kalender" />
       <div className="flex flex-col w-full pb-7">
         <PageTitle>Kalender</PageTitle>
-        <p className="mb-8">
+        <p className="mb-8 max-w-2xl">
           In het volgende overzicht vind je alle wielrenactiviteiten die komend seizoen op de
-          planning staan.
+          planning staan. Triatlonwedstrijden zijn gemarkeerd met een blauwe achtergrond.
         </p>
-        <Calendar events={nonTriEvents} />
+        <Calendar events={calendarEvents} />
       </div>
     </PageAnimation>
   )
