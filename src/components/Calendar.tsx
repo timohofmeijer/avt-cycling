@@ -10,21 +10,29 @@ const MONTHS = ['Maart', 'April', 'Mei', 'Juni', 'Juli', 'Augustus', 'September'
 const getEventTypeColors = (type: EventType): { bg: string; border: string; text: string } => {
   switch (type) {
     case 'training':
-      return { bg: 'bg-blue-50', border: 'border-blue-200', text: 'text-blue-500/30' }
+      return {
+        bg: 'bg-white',
+        border: 'border-black/10',
+        text: 'text-blue-700/80',
+      }
     case 'groupride':
-      return { bg: 'bg-blue-50', border: 'border-blue-200', text: 'text-blue-500/30' }
+      return { bg: 'bg-white', border: 'border-black/10', text: 'text-blue-700/80' }
     case 'fastride':
-      return { bg: 'bg-purple-50', border: 'border-purple-200', text: 'text-purple-500/30' }
+      return { bg: 'bg-purple-50', border: 'border-purple-700/20', text: 'text-purple-500/20' }
     case 'triathlon':
-      return { bg: 'bg-black-50', border: 'border-black-200', text: 'text-black-500/30' }
+      return { bg: 'bg-white', border: 'border-black-200', text: 'text-black-500/30' }
     case 'event':
-      return { bg: 'bg-yellow-50', border: 'border-yellow-200', text: 'text-yellow-500/30' }
+      return {
+        bg: 'bg-yellow-50',
+        border: 'border-yellow-200',
+        text: 'text-yellow-500/30',
+      }
     case 'cancelled':
-      return { bg: 'bg-gray-50', border: 'border-gray-200', text: 'text-gray-500/30' }
+      return { bg: 'bg-black/5 opacity-60', border: 'border-black/10', text: 'text-black/20' }
     case 'baan':
       return { bg: 'bg-green-50', border: 'border-green-200', text: 'text-green-500/30' }
     default:
-      return { bg: 'bg-orange-50', border: 'border-orange-200', text: 'text-orange-500/30' }
+      return { bg: 'bg-blue-700/5', border: 'border-blue-700/20', text: 'text-blue-700/30' }
   }
 }
 
@@ -50,13 +58,13 @@ export const Calendar: React.FC<Props> = ({ events }) => {
   }, {} as Record<number, CalendarEvent[]>)
 
   return (
-    <div className="bg-white/60 rounded-lg overflow-hidden">
+    <div className="bg-white/0 rounded-lg overflow-hidden">
       {MONTHS.map((month, index) => {
         const monthEvents = eventsByMonth[index] || []
         return (
           <div key={month}>
             <div className="sticky top-0 bg-white/0 z-10 border-b border-gray-200">
-              <h3 className="text-lg font-semibold p-4 text-gray-800">{month}</h3>
+              <h3 className="text-lg font-semibold p-4 pl-0 text-gray-800">{month}</h3>
             </div>
             <div className="divide-y divide-gray-200/60">
               {monthEvents.map((event, eventIndex) => {
@@ -64,14 +72,15 @@ export const Calendar: React.FC<Props> = ({ events }) => {
                 const colors = getEventTypeColors(event.type)
                 const isWeekendDay = isWeekend(date)
                 return (
-                  <div
-                    key={eventIndex}
-                    className={`p-4 space-y-1 ${isWeekendDay ? 'bg-gray-50' : ''}`}
-                  >
-                    <div className="flex items-start gap-3">
-                      <div className="flex-shrink-0 w-8 text-center">
-                        <div className="text-sm font-bold text-gray-900">{date.getDate()}</div>
-                        <div className="text-xs text-gray-500">
+                  <div key={eventIndex} className={`py-4 px-0 space-y-1`}>
+                    <div className="flex items-start gap-3 z-10 relative">
+                      <div
+                        className={`flex-shrink-0 w-7 text-center ${
+                          isWeekendDay ? 'opacity-40' : ''
+                        }`}
+                      >
+                        <div className="text-base font-bold text-gray-900">{date.getDate()}</div>
+                        <div className={`text-xs text-gray-500`}>
                           {date.toLocaleDateString('nl-NL', { weekday: 'short' })}
                         </div>
                       </div>
