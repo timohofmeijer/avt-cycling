@@ -7,7 +7,7 @@ import { Paragraph } from '@/components/Paragraph'
 
 export const metadata: Metadata = {
   title: 'Wegkapiteins – AVT Wielrennen',
-  description: '...',
+  description: 'Alle wegkapiteins van de AVT wielrengroep',
 }
 
 const Page: React.FC = () => {
