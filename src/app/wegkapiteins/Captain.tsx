@@ -5,11 +5,12 @@ import Image from 'next/image'
 import { motion } from 'framer-motion'
 import { HiOutlineChevronRight } from 'react-icons/hi'
 
-export const Captain: React.FC<{ name: string; image: string; stravaId: string }> = ({
-  name,
-  image,
-  stravaId,
-}) => {
+export const Captain: React.FC<{
+  name: string
+  image: string
+  stravaId: string
+  admin?: boolean
+}> = ({ name, image, stravaId, admin }) => {
   // const timer = useRef<ReturnType<typeof setTimeout>>()
   const [isZoomed, setZoomed] = useState(false)
 
@@ -43,15 +44,22 @@ export const Captain: React.FC<{ name: string; image: string; stravaId: string }
         />
         <div className="z-10 flex flex-col items-start justify-center">
           <h2 className="font-bold text-l">{name}</h2>
-          <a
-            target="_blank"
-            className={`flex items-center relative text-xs font-bold text-white pl-1 mt-1 rounded ${
-              stravaId ? 'bg-blue-700 pointer-events-auto' : 'bg-zinc-400'
-            }`}
-            href={`https://www.strava.com/athletes/${stravaId}`}
-          >
-            Strava <HiOutlineChevronRight size={14} />
-          </a>
+          <div className="flex items-center gap-2">
+            <a
+              target="_blank"
+              className={`flex items-center relative text-xs font-bold text-white pl-1 mt-1 rounded ${
+                stravaId ? 'bg-blue-700 pointer-events-auto' : 'bg-zinc-400'
+              }`}
+              href={`https://www.strava.com/athletes/${stravaId}`}
+            >
+              Strava <HiOutlineChevronRight size={14} />
+            </a>
+            {admin ? (
+              <div className="flex items-center relative text-xs font-bold text-white px-1 mt-1 rounded bg-black/50">
+                Coördinator
+              </div>
+            ) : null}
+          </div>
         </div>
         <div className="absolute inset-0 pointer-events-auto" onClick={handleZoom} />
       </div>
