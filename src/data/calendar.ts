@@ -4,8 +4,8 @@ import { getSunset } from '@/utils/sunsetCalculator'
 // Helper function to format sunset time as HH:mm
 function formatSunsetTime(date: string): string {
   const sunsetTime = getSunset(date, {
-    latitude: 52.1326, // Netherlands approximate center latitude
-    longitude: 5.2913, // Netherlands approximate center longitude
+    latitude: 52.15517, // Amersfoort
+    longitude: 5.3872, // Amersfoort
   })
   return sunsetTime.toLocaleTimeString('nl-NL', {
     hour: '2-digit',
