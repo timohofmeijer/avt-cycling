@@ -16,7 +16,7 @@ export const Captain: React.FC<{
     <div className="relative flex gap-4 p-3 mb-4 border-b pointer-events-none border-zinc-200 bg-zinc-200 rounded-2xl">
       <motion.div
         layoutId={`captain-${id}-captains-page`}
-        transition={{ type: 'spring', tension: 140, damping: 17, mass: 1 }}
+        transition={{ type: 'spring', stiffness: 140, damping: 17, mass: 1 }}
       >
         <Image
           className="z-10 w-16 aspect-square rounded-full bg-zinc-300"

@@ -26,7 +26,7 @@ export const ZoomedCaptainModal: React.FC<Props> = ({ zoomedCaptain, onClose }) 
           <div className="relative flex items-center justify-center w-[280px] h-[280px]">
             <motion.div
               layoutId={`captain-${zoomedCaptain.captain.id}-${zoomedCaptain.idSuffix}`}
-              transition={{ type: 'spring', tension: 310, damping: 11, mass: 0.7 }}
+              transition={{ type: 'spring', stiffness: 110, damping: 11, mass: 0.7 }}
               className="relative w-[280px] h-[280px]"
             >
               <Image
