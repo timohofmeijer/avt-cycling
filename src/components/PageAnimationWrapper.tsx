@@ -1,7 +1,7 @@
 'use client'
 
 import { useRestoreScrollPosition } from '@/hooks/use-restore-scroll-position'
-import { AnimatePresence } from 'framer-motion'
+import { AnimatePresence } from 'motion/react'
 
 /* NOTE" exit animations are currently not working in Next 13 (13.4.5 as of writing)!
   See: https://github.com/vercel/next.js/issues/49279

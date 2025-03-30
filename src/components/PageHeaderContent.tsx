@@ -3,7 +3,7 @@ import { useEffect, useState } from 'react'
 import { createPortal } from 'react-dom'
 import Link from 'next/link'
 import { BsChevronLeft } from 'react-icons/bs'
-import { motion } from 'framer-motion'
+import { motion } from 'motion/react'
 
 type PageType = 'home' | 'signalen' | 'draaien' | 'ritsen' | 'nieuw' | 'wegkapiteins' | 'kalender'
 

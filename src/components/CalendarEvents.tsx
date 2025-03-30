@@ -4,7 +4,7 @@ import { CalendarEvent, EventType } from '@/types/calendar'
 import { BsFillSunsetFill } from 'react-icons/bs'
 import Image from 'next/image'
 import { CaptainData } from '@/config/captains'
-import { motion } from 'framer-motion'
+import { motion } from 'motion/react'
 
 type Props = {
   events: CalendarEvent[]
@@ -13,15 +13,12 @@ type Props = {
 }
 
 const getEventTypeColors = (type: EventType): { bg: string; border: string; text: string } => {
+  const regular = { bg: 'bg-blue-50', border: 'border-blue-700/20', text: 'text-blue-700/80' }
   switch (type) {
     case 'training':
-      return {
-        bg: 'bg-white',
-        border: 'border-black/10',
-        text: 'text-blue-700/80',
-      }
+      return regular
     case 'groupride':
-      return { bg: 'bg-white', border: 'border-black/10', text: 'text-blue-700/80' }
+      return regular
     case 'fastride':
       return { bg: 'bg-purple-50', border: 'border-purple-700/20', text: 'text-purple-500/20' }
     case 'triathlon':
@@ -33,7 +30,7 @@ const getEventTypeColors = (type: EventType): { bg: string; border: string; text
         text: 'text-yellow-500/30',
       }
     case 'cancelled':
-      return { bg: 'bg-black/5 opacity-60', border: 'border-black/10', text: 'text-black/20' }
+      return { bg: 'bg-black/5 opacity-40', border: 'border-black/20', text: 'text-black/20' }
     case 'baan':
       return { bg: 'bg-green-50', border: 'border-green-200', text: 'text-green-500/30' }
     default:
@@ -55,7 +52,7 @@ export const CalendarEvents: React.FC<Props> = ({ events, captainsMap, onCaptain
         const isWeekendDay = isWeekend(date)
         return (
           <div key={eventIndex} className={`py-4 px-0 space-y-1`}>
-            <div className="flex items-start gap-3 z-10 relative">
+            <div className="flex items-start gap-3 relative">
               <div className={`flex-shrink-0 w-7 text-center ${isWeekendDay ? 'opacity-40' : ''}`}>
                 <div className="text-base font-bold text-gray-900">{date.getDate()}</div>
                 <div className={`text-xs text-gray-500`}>
@@ -79,10 +76,10 @@ export const CalendarEvents: React.FC<Props> = ({ events, captainsMap, onCaptain
                       </div>
                     )}
                   </div>
-                  <div className="flex justify-between items-end">
+                  <div className="flex justify-between items-start">
                     <div className="flex-1">
                       {event.description && (
-                        <div className="text-xs text-gray-600">{event.description}</div>
+                        <div className="text-xs text-black/50">{event.description}</div>
                       )}
                     </div>
                     {/* Render Captain Avatars */}
@@ -95,7 +92,8 @@ export const CalendarEvents: React.FC<Props> = ({ events, captainsMap, onCaptain
                             <motion.div
                               key={captainId}
                               layoutId={`captain-${captainId}-${event.date}`}
-                              className="w-6 h-6 rounded-full overflow-hidden border-black/5 cursor-pointer border-2 hover:border-black/10"
+                              style={{ transformOrigin: '50% 50% 0px' }}
+                              className="w-6 h-6 rounded-full overflow-hidden border-black/50 cursor-pointer border-2 hover:border-black/10 relative z-[99]"
                               onClick={(e) => {
                                 e.stopPropagation()
                                 onCaptainClick(captain, event.date)

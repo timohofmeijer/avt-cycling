@@ -1,7 +1,7 @@
 'use client'
 
 import { CaptainData } from '@/config/captains'
-import { motion, AnimatePresence } from 'framer-motion'
+import { motion, AnimatePresence } from 'motion/react'
 import { createPortal } from 'react-dom'
 import Image from 'next/image'
 
@@ -20,35 +20,25 @@ export const ZoomedCaptainModal: React.FC<Props> = ({ zoomedCaptain, onClose }) 
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
+          transition={{ damping: 10, mass: 1, stiffness: 100 }}
           className="fixed inset-0 z-[100] flex items-center justify-center bg-black/50 backdrop-blur-sm"
           onClick={onClose}
         >
-          <div className="relative flex items-center justify-center">
+          <div className="relative flex items-center justify-center w-[280px] h-[280px]">
             <motion.div
               layoutId={`captain-${zoomedCaptain.captain.id}-${zoomedCaptain.date}`}
+              style={{ transformOrigin: '50% 50% 0px' }}
               className="relative w-[280px] h-[280px]"
             >
               <Image
                 src={`/trainers/${zoomedCaptain.captain.image}`}
                 alt={zoomedCaptain.captain.name}
                 fill
-                className="rounded-full bg-zinc-300 object-cover border-4 border-black/5"
+                className="rounded-full bg-zinc-300/10 object-cover border-8 w-[280px] h-[280px]"
               />
-              <div className="absolute inset-0 rounded-full" />
-              <div className="absolute -bottom-10 left-0 right-0 text-zinc-300 text-center py-2 text-base shadow-sm">
+              <div className="absolute -bottom-10 left-0 right-0 text-zinc-100 text-center py-2 text-base">
                 {zoomedCaptain.captain.name}
               </div>
-              <motion.button
-                whileHover={{ scale: 1.1 }}
-                whileTap={{ scale: 0.9 }}
-                onClick={(e) => {
-                  e.stopPropagation()
-                  onClose()
-                }}
-                className="absolute -top-2 -right-2 aspect-square h-7 bg-black/0 text-zinc-300 rounded-full p-1 text-sm pointer-events-auto"
-              >
-                ✕
-              </motion.button>
             </motion.div>
           </div>
         </motion.div>

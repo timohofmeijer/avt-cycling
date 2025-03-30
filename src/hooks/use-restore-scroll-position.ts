@@ -1,6 +1,6 @@
 'use client'
 import { debounce } from '@/utilities/debounce'
-import { useMotionValueEvent, useScroll } from 'framer-motion'
+import { useMotionValueEvent, useScroll } from 'motion/react'
 import { usePathname } from 'next/navigation'
 import { useEffect } from 'react'
 
