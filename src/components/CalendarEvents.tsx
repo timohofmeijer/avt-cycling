@@ -5,6 +5,7 @@ import { BsFillSunsetFill } from 'react-icons/bs'
 import Image from 'next/image'
 import { CaptainData } from '@/config/captains'
 import { motion } from 'motion/react'
+import cn from 'classnames'
 
 type Props = {
   events: CalendarEvent[]
@@ -94,7 +95,10 @@ export const CalendarEvents: React.FC<Props> = ({ events, captainsMap, onCaptain
                               layoutId={`captain-${captainId}-${event.date}`}
                               transition={{ type: 'spring', stiffness: 140, damping: 17, mass: 1 }}
                               style={{ transformOrigin: '50% 50% 0px' }}
-                              className="w-6 h-6 rounded-full overflow-hidden border-black/50 cursor-pointer border-2 hover:border-black/10 relative z-[99]"
+                              className={cn(
+                                'w-6 h-6 rounded-full overflow-hidden border-black/10 cursor-pointer border-2 hover:scale-110 relative z-[99]',
+                                `border: ${colors.border}`
+                              )}
                               onClick={(e) => {
                                 e.stopPropagation()
                                 onCaptainClick(captain, event.date)
