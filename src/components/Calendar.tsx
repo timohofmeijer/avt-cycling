@@ -16,9 +16,10 @@ const MONTHS = ['Maart', 'April', 'Mei', 'Juni', 'Juli', 'Augustus', 'September'
 const captainsMap = new Map<string, CaptainData>(captains.map((c) => [c.id, c]))
 
 export const Calendar: React.FC<Props> = ({ events }) => {
-  const [zoomedCaptain, setZoomedCaptain] = useState<{ captain: CaptainData; date: string } | null>(
-    null
-  )
+  const [zoomedCaptain, setZoomedCaptain] = useState<{
+    captain: CaptainData
+    idSuffix: string
+  } | null>(null)
 
   // Group events by month
   const eventsByMonth = events.reduce((acc, event) => {
@@ -50,7 +51,7 @@ export const Calendar: React.FC<Props> = ({ events }) => {
               <CalendarEvents
                 events={monthEvents}
                 captainsMap={captainsMap}
-                onCaptainClick={(captain, date) => setZoomedCaptain({ captain, date })}
+                onCaptainClick={(captain, idSuffix) => setZoomedCaptain({ captain, idSuffix })}
               />
             </div>
           )

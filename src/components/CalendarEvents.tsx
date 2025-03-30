@@ -9,7 +9,7 @@ import { motion } from 'motion/react'
 type Props = {
   events: CalendarEvent[]
   captainsMap: Map<string, CaptainData>
-  onCaptainClick: (captain: CaptainData, date: string) => void
+  onCaptainClick: (captain: CaptainData, idSuffix: string) => void
 }
 
 const getEventTypeColors = (type: EventType): { bg: string; border: string; text: string } => {

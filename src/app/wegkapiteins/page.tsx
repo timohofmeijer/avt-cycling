@@ -4,8 +4,7 @@ import { PageHeaderContent } from '@/components/PageHeaderContent'
 import { Captain } from './Captain'
 import { PageTitle } from '@/components/PageTitle'
 import { Paragraph } from '@/components/Paragraph'
-import { captains } from '@/config/captains'
-
+import { Captains } from './Captains'
 export const metadata: Metadata = {
   title: 'Wegkapiteins – AVT Wielrennen',
   description: 'Alle wegkapiteins van de AVT wielrengroep',
@@ -23,15 +22,7 @@ const Page: React.FC = () => {
           vooral bezig houden met lekker rijden, trainen en koersen! 🙏🏼
         </Paragraph>
         <div className="mt-8">
-          {captains.map((captain) => (
-            <Captain
-              key={captain.stravaId || captain.name}
-              name={captain.name}
-              image={captain.image}
-              stravaId={captain.stravaId}
-              admin={captain.admin}
-            />
-          ))}
+          <Captains />
         </div>
       </div>
     </PageAnimation>

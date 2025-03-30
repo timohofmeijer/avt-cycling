@@ -6,7 +6,7 @@ import { createPortal } from 'react-dom'
 import Image from 'next/image'
 
 type Props = {
-  zoomedCaptain: { captain: CaptainData; date: string } | null
+  zoomedCaptain: { captain: CaptainData; idSuffix: string } | null
   onClose: () => void
 }
 
@@ -26,7 +26,7 @@ export const ZoomedCaptainModal: React.FC<Props> = ({ zoomedCaptain, onClose }) 
         >
           <div className="relative flex items-center justify-center w-[280px] h-[280px]">
             <motion.div
-              layoutId={`captain-${zoomedCaptain.captain.id}-${zoomedCaptain.date}`}
+              layoutId={`captain-${zoomedCaptain.captain.id}-${zoomedCaptain.idSuffix}`}
               style={{ transformOrigin: '50% 50% 0px' }}
               className="relative w-[280px] h-[280px]"
             >
