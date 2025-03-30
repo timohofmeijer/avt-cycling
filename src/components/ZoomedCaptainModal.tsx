@@ -20,14 +20,13 @@ export const ZoomedCaptainModal: React.FC<Props> = ({ zoomedCaptain, onClose }) 
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
-          transition={{ damping: 10, mass: 1, stiffness: 100 }}
           className="fixed inset-0 z-[100] flex items-center justify-center bg-black/50 backdrop-blur-sm"
           onClick={onClose}
         >
           <div className="relative flex items-center justify-center w-[280px] h-[280px]">
             <motion.div
               layoutId={`captain-${zoomedCaptain.captain.id}-${zoomedCaptain.idSuffix}`}
-              style={{ transformOrigin: '50% 50% 0px' }}
+              transition={{ type: 'spring', tension: 310, damping: 11, mass: 0.7 }}
               className="relative w-[280px] h-[280px]"
             >
               <Image

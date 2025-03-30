@@ -92,6 +92,7 @@ export const CalendarEvents: React.FC<Props> = ({ events, captainsMap, onCaptain
                             <motion.div
                               key={captainId}
                               layoutId={`captain-${captainId}-${event.date}`}
+                              transition={{ type: 'spring', tension: 140, damping: 17, mass: 1 }}
                               style={{ transformOrigin: '50% 50% 0px' }}
                               className="w-6 h-6 rounded-full overflow-hidden border-black/50 cursor-pointer border-2 hover:border-black/10 relative z-[99]"
                               onClick={(e) => {
