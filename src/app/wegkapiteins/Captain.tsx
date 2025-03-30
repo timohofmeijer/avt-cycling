@@ -31,7 +31,7 @@ export const Captain: React.FC<{
 
       <div className="relative flex gap-4 p-3 mb-4 border-b pointer-events-none border-zinc-200 bg-zinc-200 rounded-2xl">
         <Image
-          className="z-10 w-16 transition-all origin-left rounded-full bg-zinc-300"
+          className="z-10 w-16 aspect-square transition-all origin-left rounded-full bg-zinc-300"
           style={{
             scale: isZoomed ? 4 : 1,
             zIndex: isZoomed ? 30 : '',
