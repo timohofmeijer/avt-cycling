@@ -25,6 +25,7 @@ const allCalendarEvents: CalendarEvent[] = [
     type: 'event',
     startTime: '19:00',
     endTime: '20:00',
+    captainIds: ['mark_wossink'],
   },
   {
     date: '2025-04-02',
@@ -40,13 +41,16 @@ const allCalendarEvents: CalendarEvent[] = [
     type: 'baan',
     startTime: '19:00',
     endTime: formatSunsetTime('2025-04-04'),
+    captainIds: ['gerjan_van_roekel', 'djoeke_donkers'],
   },
   {
     date: '2025-04-06',
     title: 'Sunday Fast Ride',
+    description: '100 km 33+ gemiddeld',
     type: 'fastride',
     startTime: '09:00',
     endTime: '12:00',
+    captainIds: ['peter_van_dartel'],
   },
   {
     date: '2025-04-09',
@@ -62,6 +66,7 @@ const allCalendarEvents: CalendarEvent[] = [
     type: 'baan',
     startTime: '19:00',
     endTime: formatSunsetTime('2025-04-11'),
+    captainIds: ['djoeke_donkers'],
   },
   {
     date: '2025-04-16',
@@ -69,6 +74,7 @@ const allCalendarEvents: CalendarEvent[] = [
     type: 'groupride',
     startTime: '19:00',
     endTime: formatSunsetTime('2025-04-16'),
+    captainIds: ['luuc_rutgers'],
   },
   {
     date: '2025-04-18',
@@ -77,6 +83,7 @@ const allCalendarEvents: CalendarEvent[] = [
     type: 'baan',
     startTime: '19:00',
     endTime: formatSunsetTime('2025-04-18'),
+    captainIds: ['peter_kuin', 'gerjan_van_roekel'],
   },
   {
     date: '2025-04-23',
@@ -88,7 +95,7 @@ const allCalendarEvents: CalendarEvent[] = [
   {
     date: '2025-04-25',
     title: 'Wielerbaan Eemland',
-    description: 'Rijden in de groep / Koers',
+    description: 'Rijden in de groep / Koers + TTT oefening',
     type: 'baan',
     startTime: '19:00',
     endTime: formatSunsetTime('2025-04-25'),
@@ -107,6 +114,7 @@ const allCalendarEvents: CalendarEvent[] = [
     type: 'groupride',
     startTime: '19:00',
     endTime: formatSunsetTime('2025-04-30'),
+    captainIds: ['luuc_rutgers'],
   },
   {
     date: '2025-05-03',
@@ -132,9 +140,11 @@ const allCalendarEvents: CalendarEvent[] = [
   {
     date: '2025-05-11',
     title: 'Sunday Fast Ride',
+    description: '100 km 33+ gemiddeld',
     type: 'fastride',
     startTime: '09:00',
     endTime: '12:00',
+    captainIds: ['peter_kuin'],
   },
   {
     date: '2025-05-12',
@@ -143,6 +153,7 @@ const allCalendarEvents: CalendarEvent[] = [
     type: 'training',
     startTime: '19:00',
     endTime: formatSunsetTime('2025-05-12'),
+    captainIds: ['djoeke_donkers', 'peter_kuin'],
   },
   {
     date: '2025-05-14',
@@ -165,6 +176,7 @@ const allCalendarEvents: CalendarEvent[] = [
     type: 'training',
     startTime: '19:00',
     endTime: formatSunsetTime('2025-05-19'),
+    captainIds: ['djoeke_donkers', 'gerjan_van_roekel'],
   },
   {
     date: '2025-05-21',
@@ -180,6 +192,7 @@ const allCalendarEvents: CalendarEvent[] = [
     type: 'training',
     startTime: '19:00',
     endTime: formatSunsetTime('2025-05-26'),
+    captainIds: ['peter_kuin'],
   },
   {
     date: '2025-05-28',
@@ -191,9 +204,11 @@ const allCalendarEvents: CalendarEvent[] = [
   {
     date: '2025-06-01',
     title: 'Sunday Fast Ride',
+    description: '100 km 33+ gemiddeld',
     type: 'fastride',
     startTime: '09:00',
     endTime: '12:00',
+    captainIds: ['peter_van_dartel'],
   },
   {
     date: '2025-06-02',
@@ -202,6 +217,7 @@ const allCalendarEvents: CalendarEvent[] = [
     type: 'training',
     startTime: '19:00',
     endTime: formatSunsetTime('2025-06-02'),
+    captainIds: ['djoeke_donkers', 'gerjan_van_roekel'],
   },
   {
     date: '2025-06-04',
@@ -217,6 +233,7 @@ const allCalendarEvents: CalendarEvent[] = [
     type: 'event',
     startTime: '09:00',
     endTime: '12:00',
+    captainIds: ['gerjan_van_roekel'],
   },
   {
     date: '2025-06-08',
@@ -250,6 +267,7 @@ const allCalendarEvents: CalendarEvent[] = [
     type: 'training',
     startTime: '19:00',
     endTime: formatSunsetTime('2025-06-16'),
+    captainIds: ['djoeke_donkers'],
   },
   {
     date: '2025-06-18',
@@ -261,9 +279,11 @@ const allCalendarEvents: CalendarEvent[] = [
   {
     date: '2025-06-22',
     title: 'Sunday Fast Ride',
+    description: '100 km 33+ gemiddeld',
     type: 'fastride',
     startTime: '09:00',
     endTime: '12:00',
+    captainIds: ['peter_van_dartel'],
   },
   {
     date: '2025-06-23',
@@ -272,6 +292,7 @@ const allCalendarEvents: CalendarEvent[] = [
     type: 'training',
     startTime: '19:00',
     endTime: formatSunsetTime('2025-06-23'),
+    captainIds: ['djoeke_donkers'],
   },
   {
     date: '2025-06-25',
@@ -283,9 +304,11 @@ const allCalendarEvents: CalendarEvent[] = [
   {
     date: '2025-06-29',
     title: 'Sunday Fast Ride',
+    description: '100 km 33+ gemiddeld',
     type: 'fastride',
     startTime: '09:00',
     endTime: '12:00',
+    captainIds: ['peter_van_dartel'],
   },
   {
     date: '2025-06-30',
@@ -317,6 +340,7 @@ const allCalendarEvents: CalendarEvent[] = [
     type: 'training',
     startTime: '19:00',
     endTime: formatSunsetTime('2025-07-07'),
+    captainIds: ['djoeke_donkers'],
   },
   {
     date: '2025-07-09',
@@ -339,6 +363,7 @@ const allCalendarEvents: CalendarEvent[] = [
     type: 'training',
     startTime: '19:00',
     endTime: formatSunsetTime('2025-07-14'),
+    captainIds: ['djoeke_donkers'],
   },
   {
     date: '2025-07-16',
@@ -350,9 +375,11 @@ const allCalendarEvents: CalendarEvent[] = [
   {
     date: '2025-07-20',
     title: 'Sunday Fast Ride',
+    description: '100 km 33+ gemiddeld',
     type: 'fastride',
     startTime: '09:00',
     endTime: '12:00',
+    captainIds: ['peter_van_dartel'],
   },
   {
     date: '2025-07-21',
@@ -440,7 +467,7 @@ const allCalendarEvents: CalendarEvent[] = [
   {
     date: '2025-08-25',
     title: 'Training',
-    description: 'Intervaltraining (blokken)',
+    description: 'Vrij in te vullen',
     type: 'training',
     startTime: '19:00',
     endTime: formatSunsetTime('2025-08-25'),
@@ -493,9 +520,11 @@ const allCalendarEvents: CalendarEvent[] = [
   {
     date: '2025-09-14',
     title: 'Sunday Fast Ride',
+    description: '100 km 33+ gemiddeld',
     type: 'fastride',
     startTime: '09:00',
     endTime: '12:00',
+    captainIds: ['peter_van_dartel'],
   },
   {
     date: '2025-09-15',
@@ -505,12 +534,25 @@ const allCalendarEvents: CalendarEvent[] = [
   },
 ]
 
+const firstEventDate = '2025-03-24'
+if (!allCalendarEvents.some((event) => event.date === firstEventDate)) {
+  allCalendarEvents.unshift({
+    date: firstEventDate,
+    title: 'Wegkapiteinen Meeting',
+    description: 'Met trainers en nieuwe talenten. Vertrek 18:00 clubhuis.',
+    type: 'event',
+    startTime: '18:00',
+  })
+  allCalendarEvents.sort((a, b) => new Date(a.date).getTime() - new Date(b.date).getTime())
+}
+
 export const getUpcomingEvents = (): CalendarEvent[] => {
   const today = new Date()
   today.setHours(0, 0, 0, 0)
 
   return allCalendarEvents.filter((event) => {
     const eventDate = new Date(event.date)
+    eventDate.setHours(0, 0, 0, 0)
     return eventDate >= today && event.type !== 'triathlon'
   })
 }

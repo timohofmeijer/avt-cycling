@@ -1,11 +1,16 @@
 import { CalendarEvent, EventType } from '@/types/calendar'
 import { BsFillSunsetFill } from 'react-icons/bs'
+import Image from 'next/image'
+import { captains, CaptainData } from '@/config/captains'
 
 type Props = {
   events: CalendarEvent[]
 }
 
 const MONTHS = ['Maart', 'April', 'Mei', 'Juni', 'Juli', 'Augustus', 'September']
+
+// Create a map for quick lookup of captains by their new ID
+const captainsMap = new Map<string, CaptainData>(captains.map((c) => [c.id, c]))
 
 const getEventTypeColors = (type: EventType): { bg: string; border: string; text: string } => {
   switch (type) {
@@ -101,9 +106,31 @@ export const Calendar: React.FC<Props> = ({ events }) => {
                               </div>
                             )}
                           </div>
-                          {event.description && (
-                            <div className="text-xs text-gray-600 mt-1">{event.description}</div>
-                          )}
+                          <div className="flex justify-between items-end mt-1">
+                            {event.description && (
+                              <div className="text-xs text-gray-600">{event.description}</div>
+                            )}
+                            {/* Render Captain Avatars */}
+                            {event.captainIds && event.captainIds.length > 0 && (
+                              <div className="flex items-center gap-1">
+                                {event.captainIds.map((captainId) => {
+                                  const captain = captainsMap.get(captainId)
+                                  if (!captain || captain.image === 'blank.png') return null // Skip if captain not found or has blank image
+                                  return (
+                                    <Image
+                                      key={captainId}
+                                      src={`/trainers/${captain.image}`}
+                                      alt={captain.name}
+                                      width={24}
+                                      height={24}
+                                      className="w-6 h-6 rounded-full bg-zinc-300 border border-white/50"
+                                      title={captain.name}
+                                    />
+                                  )
+                                })}
+                              </div>
+                            )}
+                          </div>
                         </div>
                       </div>
                     </div>

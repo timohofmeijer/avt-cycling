@@ -15,4 +15,5 @@ export type CalendarEvent = {
   type: EventType
   startTime?: string
   endTime?: string
+  captainIds?: string[]
 }
