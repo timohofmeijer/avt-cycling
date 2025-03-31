@@ -27,7 +27,9 @@ export const ZoomedCaptainModal: React.FC<Props> = ({ zoomedCaptain, onClose }) 
             className="fixed inset-0 z-[100] flex items-center justify-center bg-black/50 backdrop-blur-sm"
             onClick={onClose}
           >
-            <div className={`relative flex items-center justify-center w-[${IMAGE_SIZE}px] h-[${IMAGE_SIZE}px]`}>
+            <div
+              className={`relative flex items-center justify-center w-[${IMAGE_SIZE}px] h-[${IMAGE_SIZE}px]`}
+            >
               <motion.div
                 layoutId={`captain-${zoomedCaptain.captain.id}-${zoomedCaptain.idSuffix}`}
                 transition={{ type: 'spring', stiffness: 110, damping: 11, mass: 0.7 }}
@@ -38,10 +40,10 @@ export const ZoomedCaptainModal: React.FC<Props> = ({ zoomedCaptain, onClose }) 
                   alt={zoomedCaptain.captain.name}
                   width={IMAGE_SIZE}
                   height={IMAGE_SIZE}
-                  className={`rounded-full bg-zinc-300 object-cover border-8 w-[${IMAGE_SIZE}px] h-[${IMAGE_SIZE}px]`}
+                  className={`rounded-full border-8 bg-zinc-300 object-cover w-[${IMAGE_SIZE}px] h-[${IMAGE_SIZE}px]`}
                   priority
                 />
-                <div className="absolute -bottom-10 left-0 right-0 text-zinc-100 text-center py-2 text-base">
+                <div className="absolute right-0 -bottom-10 left-0 py-2 text-center text-base text-zinc-100">
                   {zoomedCaptain.captain.name}
                 </div>
               </motion.div>
@@ -50,10 +52,7 @@ export const ZoomedCaptainModal: React.FC<Props> = ({ zoomedCaptain, onClose }) 
         )}
       </AnimatePresence>
       <PreloadCaptainImages />
-      </>
-    ,
-    document.body
+    </>,
+    document.body,
   )
 }
-
-

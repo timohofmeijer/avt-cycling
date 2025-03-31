@@ -26,22 +26,28 @@ export const CalendarEvents: React.FC<Props> = ({ events, captainsMap, onCaptain
         const colors = getEventTypeColors(event.type)
         const isWeekendDay = isWeekend(date)
         return (
-          <div key={eventIndex} className={`py-4 px-0 space-y-1`}>
-            <div className="flex items-start gap-3 relative">
-              <div className={`flex-shrink-0 w-7 text-center ${isWeekendDay ? 'opacity-40' : ''}`}>
-                <div className="text-base font-bold text-gray-900">{date.getDate()}</div>
-                <div className={`text-xs text-gray-500`}>
+          <div key={eventIndex} className={`space-y-1 px-0 py-4`}>
+            <div className="relative flex items-start gap-3">
+              <div
+                className={`mt-3 w-7 flex-shrink-0 scale-90 text-center ${isWeekendDay ? 'opacity-40' : ''}`}
+              >
+                <div className="text-lg leading-none font-bold text-gray-900">{date.getDate()}</div>
+                <div className={`text-sm text-gray-500`}>
                   {date.toLocaleDateString('nl-NL', { weekday: 'short' })}
                 </div>
               </div>
               <div className="flex-1">
-                <div className={`relative p-2 rounded-md border ${colors.border} ${event.type === 'cancelled' ? 'opacity-50' : ''}`}>
+                <div
+                  className={`relative rounded-md border p-2 ${colors.border} ${event.type === 'cancelled' ? 'opacity-50' : ''}`}
+                >
                   <div className={`absolute inset-0 -z-10 ${colors.bg}`} />
-                  <div className={`absolute inset-0 -z-20 bg-white ${event.type === 'cancelled' ? 'opacity-40' : ''}`} />
-                  <div className="flex justify-between items-start">
+                  <div
+                    className={`absolute inset-0 -z-20 bg-white ${event.type === 'cancelled' ? 'opacity-40' : ''}`}
+                  />
+                  <div className="flex items-start justify-between">
                     <div className="text-sm font-medium text-gray-800">{event.title}</div>
                     {event.startTime && event.endTime && (
-                      <div className="flex items-center gap-1 text-xs font-medium text-gray-600">
+                      <div className="mt-[1px] flex items-center gap-1 text-xs font-medium text-gray-600">
                         {/groupride|training/.test(event.type) && (
                           <div className="relative top-[-1px]">
                             <BsFillSunsetFill className={colors.text} />
@@ -53,7 +59,7 @@ export const CalendarEvents: React.FC<Props> = ({ events, captainsMap, onCaptain
                       </div>
                     )}
                   </div>
-                  <div className="flex justify-between items-start">
+                  <div className="flex items-start justify-between">
                     <div className="flex-1">
                       {event.description && (
                         <div className="text-xs text-black/50">{event.description}</div>
@@ -61,7 +67,7 @@ export const CalendarEvents: React.FC<Props> = ({ events, captainsMap, onCaptain
                     </div>
                     {/* Render Captain Avatars */}
                     {event.captainIds && event.captainIds.length > 0 && (
-                      <div className="flex items-center gap-1 ml-2 z-10">
+                      <div className="relative top-[2px] z-10 mt-[-3px] ml-2 flex items-center gap-1">
                         {event.captainIds.map((captainId) => {
                           const captain = captainsMap.get(captainId)
                           if (!captain || captain.image === 'blank.png') return null // Skip if captain not found or has blank image
@@ -71,8 +77,8 @@ export const CalendarEvents: React.FC<Props> = ({ events, captainsMap, onCaptain
                               layoutId={`captain-${captainId}-${event.date}`}
                               transition={{ type: 'spring', stiffness: 140, damping: 17, mass: 1 }}
                               className={cn(
-                                'w-6 h-6 rounded-full overflow-hidden border-black/10 cursor-pointer border-2 hover:scale-110 relative z-[99]',
-                                `border: ${colors.border}`
+                                'relative z-[99] h-6 w-6 cursor-pointer overflow-hidden rounded-full border-2 border-black/10 hover:scale-110',
+                                `border: ${colors.border}`,
                               )}
                               onClick={(e) => {
                                 e.stopPropagation()
@@ -84,7 +90,7 @@ export const CalendarEvents: React.FC<Props> = ({ events, captainsMap, onCaptain
                                 alt={captain.name}
                                 width={24}
                                 height={24}
-                                className="w-full h-full object-cover text-transparent"
+                                className="h-full w-full object-cover text-transparent"
                                 title={captain.name}
                               />
                             </motion.div>

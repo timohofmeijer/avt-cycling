@@ -13,13 +13,13 @@ export const Captain: React.FC<{
   handleClick: () => void
 }> = ({ name, image, stravaId, admin, id, handleClick }) => {
   return (
-    <div className="relative flex gap-4 p-3 mb-4 border-b pointer-events-none border-zinc-200 bg-zinc-200 rounded-2xl">
+    <div className="pointer-events-none relative mb-4 flex gap-4 rounded-2xl border-b border-zinc-200 bg-zinc-200 p-3">
       <motion.div
         layoutId={`captain-${id}-captains-page`}
         transition={{ type: 'spring', stiffness: 140, damping: 17, mass: 1 }}
       >
         <Image
-          className="z-10 w-16 aspect-square rounded-full bg-zinc-200  border-4 border-zinc-100"
+          className="z-10 aspect-square w-16 rounded-full border-4 border-zinc-100 bg-zinc-200"
           src={`/trainers/${image}`}
           alt={name}
           width={866}
@@ -27,25 +27,25 @@ export const Captain: React.FC<{
         />
       </motion.div>
       <div className="z-10 flex flex-col items-start justify-center">
-        <h2 className="font-bold text-l">{name}</h2>
+        <h2 className="text-l font-bold">{name}</h2>
         <div className="flex items-center gap-2">
           <a
             target="_blank"
-            className={`flex items-center relative text-xs font-bold text-white pl-1 mt-1 rounded ${
-              stravaId ? 'bg-blue-700 pointer-events-auto' : 'bg-zinc-400'
+            className={`relative mt-1 flex items-center rounded pl-1 text-xs font-bold text-white ${
+              stravaId ? 'pointer-events-auto bg-blue-700' : 'bg-zinc-400'
             }`}
             href={`https://www.strava.com/athletes/${stravaId}`}
           >
             Strava <HiOutlineChevronRight size={14} />
           </a>
           {admin ? (
-            <div className="flex items-center relative text-xs font-bold text-white px-1 mt-1 rounded bg-black/50">
+            <div className="relative mt-1 flex items-center rounded bg-black/50 px-1 text-xs font-bold text-white">
               Coördinator
             </div>
           ) : null}
         </div>
       </div>
-      <div className="absolute inset-0 pointer-events-auto" onClick={handleClick} />
+      <div className="pointer-events-auto absolute inset-0" onClick={handleClick} />
     </div>
   )
 }

@@ -5,7 +5,7 @@ export const LinkDown: React.FC<{ hash: string; children: React.ReactNode }> = (
   children,
 }) => {
   return (
-    <a href={hash} className="flex items-center mb-1 text-blue-700">
+    <a href={hash} className="mb-1 flex items-center text-blue-700">
       {children} <FaArrowAltCircleDown size={13} className="ml-2" />
     </a>
   )

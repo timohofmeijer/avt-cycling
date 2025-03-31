@@ -14,7 +14,7 @@ const Page: React.FC = () => {
   return (
     <PageAnimation>
       <PageHeaderContent page="kalender" />
-      <div className="flex flex-col w-full pb-7">
+      <div className="flex w-full flex-col pb-7">
         <PageTitle>Kalender</PageTitle>
         <p className="mb-8 max-w-2xl">
           In het volgende overzicht vind je alle wielrenactiviteiten die komend seizoen op de

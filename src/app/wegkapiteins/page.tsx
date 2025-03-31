@@ -14,7 +14,7 @@ const Page: React.FC = () => {
   return (
     <PageAnimation>
       <PageHeaderContent page="wegkapiteins" />
-      <div className="flex flex-col w-full pb-7">
+      <div className="flex w-full flex-col pb-7">
         <PageTitle>Wegkapiteins</PageTitle>
         <Paragraph>
           Wij zullen proberen de afspraken, zoals op deze site omschreven, consistent na te leven en

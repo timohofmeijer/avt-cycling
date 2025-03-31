@@ -16,7 +16,7 @@ const Page: React.FC = () => {
   return (
     <PageAnimation>
       <PageHeaderContent page="ritsen" />
-      <div className="flex flex-col w-full">
+      <div className="flex w-full flex-col">
         <PageTitle>Ritsen</PageTitle>
         <Paragraph>
           Wanneer we twee aan twee rijden en de weg smaller wordt of er is veel verkeer, dan kan de
@@ -32,7 +32,7 @@ const Page: React.FC = () => {
             alt="Ritsen"
             width={430}
             height={2127}
-            className="flex-grow-0 flex-shrink-0 object-contain object-top w-1/5"
+            className="w-1/5 flex-shrink-0 flex-grow-0 object-contain object-top"
           />
           <div className="mt-6">
             <Paragraph>

@@ -17,7 +17,7 @@ const Page: React.FC = () => {
   return (
     <PageAnimation>
       <PageHeaderContent page="draaien" />
-      <div className="flex flex-col w-full">
+      <div className="flex w-full flex-col">
         <PageTitle>Draaien in een groep</PageTitle>
         <Paragraph>
           De voorste renners van een groep zullen een stuk harder moeten trappen omdat ze ‘in de

@@ -16,7 +16,7 @@ const Page: React.FC = () => {
   return (
     <PageAnimation>
       <PageHeaderContent page="signalen" />
-      <div className="flex flex-col w-full">
+      <div className="flex w-full flex-col">
         <PageTitle>Signalen</PageTitle>
         <Paragraph>
           Omdat je minder overzicht hebt wanneer je in een groep rijdt, maken we gebruik van heldere

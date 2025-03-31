@@ -15,7 +15,7 @@ const Page: React.FC = () => {
   return (
     <PageAnimation>
       <PageHeaderContent page="nieuw" />
-      <div className="flex flex-col w-full">
+      <div className="flex w-full flex-col">
         <PageTitle>Nieuwe deelnemers</PageTitle>
         <Paragraph>
           Welkom bij de wielrengroep van AV Triathlon! Leuk dat je met ons mee komt rijden! Lees het

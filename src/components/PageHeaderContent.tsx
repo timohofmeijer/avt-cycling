@@ -17,29 +17,29 @@ export const PageHeaderContent: React.FC<{ page: PageType }> = ({ page }) => {
     ? createPortal(
         <>
           <motion.div
-            className="absolute z-10 w-full top-4 bottom-3"
+            className="absolute top-4 bottom-3 z-10 w-full"
             initial={{ scale: 0.5, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
             // transition={{ delay: 0.2 }}
           >
             {notRoot ? (
-              <div className="relative flex items-center justify-center w-full h-8 text-xs text-center text-zinc-400">
+              <div className="relative flex h-8 w-full items-center justify-center text-center text-xs text-zinc-400">
                 {pageTitles['home']}
               </div>
             ) : null}
-            <div className="absolute bottom-0 flex items-center justify-center w-full h-8 font-bold text-center text-md text-zinc-500">
+            <div className="text-md absolute bottom-0 flex h-8 w-full items-center justify-center text-center font-bold text-zinc-500">
               {pageTitles[page]}
             </div>
           </motion.div>
           {notRoot ? (
             <motion.div
-              className="absolute z-10 bottom-3"
+              className="absolute bottom-3 z-10"
               initial={{ scale: 0.5, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
               transition={{ delay: 0.35 }}
             >
               <Link
-                className="absolute bottom-0 flex items-center h-8 gap-1 text-blue-700 justify-items-center"
+                className="absolute bottom-0 flex h-8 items-center justify-items-center gap-1 text-blue-700"
                 href="/"
               >
                 <BsChevronLeft size={18} /> Terug
@@ -47,7 +47,7 @@ export const PageHeaderContent: React.FC<{ page: PageType }> = ({ page }) => {
             </motion.div>
           ) : null}
         </>,
-        document.querySelector('#headerPortal')!
+        document.querySelector('#headerPortal')!,
       )
     : null
 }
