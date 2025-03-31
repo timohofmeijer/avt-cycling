@@ -140,7 +140,7 @@ export const Signal: React.FC<{ type: SignalType; modStandalone?: boolean }> = (
             </svg>
           </div>
           <div className="mt-4 text-sm">{SignalTypeIntro[type]}</div>
-          <div className="mt-2 text-xs text-zinc-500">
+          <div className="mt-2 text-xs text-zinc-500 mb-3">
             {SignalTypeBody[type]}
             {type === 'ritsen' && !modStandalone && (
               <>

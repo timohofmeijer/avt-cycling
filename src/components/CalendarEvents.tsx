@@ -13,32 +13,6 @@ type Props = {
   onCaptainClick: (captain: CaptainData, idSuffix: string) => void
 }
 
-const getEventTypeColors = (type: EventType): { bg: string; border: string; text: string } => {
-  const regular = { bg: 'bg-blue-50/80', border: 'border-blue-700/20', text: 'text-blue-700/80' }
-  switch (type) {
-    case 'training':
-      return regular
-    case 'groupride':
-      return regular
-    case 'fastride':
-      return { bg: 'bg-purple-50', border: 'border-purple-700/20', text: 'text-purple-500/20' }
-    case 'triathlon':
-      return { bg: 'bg-white', border: 'border-black-200', text: 'text-black-500/30' }
-    case 'event':
-      return {
-        bg: 'bg-yellow-50/80',
-        border: 'border-yellow-200',
-        text: 'text-yellow-500/30',
-      }
-    case 'cancelled':
-      return { bg: 'bg-black/5 opacity-40', border: 'border-black/20', text: 'text-black/20' }
-    case 'baan':
-      return { bg: 'bg-green-50', border: 'border-green-200', text: 'text-green-500/30' }
-    default:
-      return { bg: 'bg-blue-700/5', border: 'border-blue-700/20', text: 'text-blue-700/30' }
-  }
-}
-
 const isWeekend = (date: Date): boolean => {
   const day = date.getDay()
   return day === 0 || day === 6 // 0 is Sunday, 6 is Saturday
@@ -127,4 +101,55 @@ export const CalendarEvents: React.FC<Props> = ({ events, captainsMap, onCaptain
       })}
     </div>
   )
+}
+
+const getEventTypeColors = (type: EventType): { bg: string; border: string; text: string } => {
+  const regular = {
+    bg: 'bg-blue-50/80',
+    border: 'border-blue-700/20',
+    text: 'text-blue-700/80',
+  }
+
+  switch (type) {
+    case 'training':
+      return regular
+    case 'groupride':
+      return regular
+    case 'fastride':
+      return {
+        bg: 'bg-purple-50',
+        border: 'border-purple-700/15',
+        text: 'text-purple-500/20',
+      }
+    case 'triathlon':
+      return {
+        bg: 'bg-white',
+        border: 'border-black-200',
+        text: 'text-black-500/30',
+      }
+    case 'event':
+      return {
+        bg: 'bg-yellow-50/80',
+        border: 'border-yellow-200',
+        text: 'text-yellow-500/30',
+      }
+    case 'cancelled':
+      return {
+        bg: 'bg-black/5 opacity-40',
+        border: 'border-black/20',
+        text: 'text-black/20',
+      }
+    case 'baan':
+      return {
+        bg: 'bg-green-50',
+        border: 'border-green-200',
+        text: 'text-green-500/30',
+      }
+    default:
+      return {
+        bg: 'bg-blue-700/5',
+        border: 'border-blue-700/20',
+        text: 'text-blue-700/30',
+      }
+  }
 }

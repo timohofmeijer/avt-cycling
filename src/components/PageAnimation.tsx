@@ -1,13 +1,13 @@
 'use client'
 import cn from 'classnames'
-import { motion } from 'motion/react'
-import { usePathname } from 'next/navigation'
+// import { motion } from 'motion/react'
+// import { usePathname } from 'next/navigation'
 
 export const PageAnimation: React.FC<{
   children: React.ReactNode
   direction?: 'left' | 'right'
   className?: string
-}> = ({ children, direction = 'right', className }) => {
+}> = ({ children, /* direction = 'right', */ className }) => {
   return <div className={cn(className, 'min-h-screen w-full')}>{children}</div>
 }
 

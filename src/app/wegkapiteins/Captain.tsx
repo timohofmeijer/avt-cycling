@@ -19,7 +19,7 @@ export const Captain: React.FC<{
         transition={{ type: 'spring', stiffness: 140, damping: 17, mass: 1 }}
       >
         <Image
-          className="z-10 w-16 aspect-square rounded-full bg-zinc-300  border-4 border-zinc-300"
+          className="z-10 w-16 aspect-square rounded-full bg-zinc-200  border-4 border-zinc-100"
           src={`/trainers/${image}`}
           alt={name}
           width={866}

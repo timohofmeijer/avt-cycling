@@ -48,7 +48,7 @@ export const ZoomedCaptainModal: React.FC<Props> = ({ zoomedCaptain, onClose }) 
                   alt={zoomedCaptain.captain.name}
                   width={280}
                   height={280}
-                  className="rounded-full bg-zinc-300/10 object-cover border-8 w-[280px] h-[280px]"
+                  className="rounded-full bg-zinc-300 object-cover border-8 w-[280px] h-[280px]"
                   priority
                 />
                 <div className="absolute -bottom-10 left-0 right-0 text-zinc-100 text-center py-2 text-base">

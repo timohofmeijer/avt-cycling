@@ -1,10 +1,10 @@
 import { Metadata } from 'next'
 import { PageAnimation } from '@/components/PageAnimation'
 import { PageHeaderContent } from '@/components/PageHeaderContent'
-import { Captain } from './Captain'
 import { PageTitle } from '@/components/PageTitle'
 import { Paragraph } from '@/components/Paragraph'
 import { Captains } from './Captains'
+
 export const metadata: Metadata = {
   title: 'Wegkapiteins – AVT Wielrennen',
   description: 'Alle wegkapiteins van de AVT wielrengroep',
