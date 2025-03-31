@@ -33,7 +33,7 @@ const allCalendarEvents: CalendarEvent[] = [
     type: 'groupride',
     startTime: '19:00',
     endTime: formatSunsetTime('2025-04-02'),
-    captainIds: ['timo_hofmeijer'],
+    captainIds: ['timo_hofmeijer', 'sjoerd_roelofs'],
   },
   {
     date: '2025-04-04',
@@ -59,6 +59,7 @@ const allCalendarEvents: CalendarEvent[] = [
     type: 'groupride',
     startTime: '19:00',
     endTime: formatSunsetTime('2025-04-09'),
+    captainIds: ['sjoerd_roelofs'],
   },
   {
     date: '2025-04-11',
@@ -404,6 +405,7 @@ const allCalendarEvents: CalendarEvent[] = [
     type: 'training',
     startTime: '19:00',
     endTime: formatSunsetTime('2025-07-28'),
+    captainIds: ['djoeke_donkers'],
   },
   {
     date: '2025-07-30',
@@ -427,6 +429,7 @@ const allCalendarEvents: CalendarEvent[] = [
     type: 'training',
     startTime: '19:00',
     endTime: formatSunsetTime('2025-08-04'),
+    captainIds: ['djoeke_donkers'],
   },
   {
     date: '2025-08-06',
@@ -442,6 +445,7 @@ const allCalendarEvents: CalendarEvent[] = [
     type: 'training',
     startTime: '19:00',
     endTime: formatSunsetTime('2025-08-11'),
+    captainIds: ['djoeke_donkers'],
   },
   {
     date: '2025-08-13',
@@ -457,6 +461,7 @@ const allCalendarEvents: CalendarEvent[] = [
     type: 'training',
     startTime: '19:00',
     endTime: formatSunsetTime('2025-08-18'),
+    captainIds: ['djoeke_donkers'],
   },
   {
     date: '2025-08-20',
