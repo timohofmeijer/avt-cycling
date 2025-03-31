@@ -8,8 +8,8 @@ const manifest = {
   start_url: '/',
   display: 'standalone',
   orientation: 'portrait-primary',
-  // background_color: 'oklch(0.98 0 0)',
-  // theme_color: 'oklch(0.98 0 0)',
+  background_color: '#fafafa',
+  theme_color: '#fafafa',
   icons: [
     { src: '/apple-icon/192', type: 'image/png', sizes: '192x192' },
     { src: '/apple-icon/512', type: 'image/png', sizes: '512x512', purpose: 'maskable' },
