@@ -1,4 +1,4 @@
-@import 'tailwindcss';
+@import 'tailwindcss' source('../../src');
 
 :root {
   --foreground-rgb: 0, 0, 0;
@@ -17,3 +17,20 @@
 /*body {
   color: rgb(var(--foreground-rgb));
 }*/
+
+@future {
+  --hover-only-when-supported: true;
+}
+
+@theme {
+  --animate-left-right: wiggle 1s ease-in-out infinite;
+  @keyframes wiggle {
+    0%,
+    100% {
+      transform: translateX(-1px);
+    }
+    50% {
+      transform: translateX(2px);
+    }
+  }
+}
