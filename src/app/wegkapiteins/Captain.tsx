@@ -13,13 +13,13 @@ export const Captain: React.FC<{
   handleClick: () => void
 }> = ({ name, image, stravaId, admin, id, handleClick }) => {
   return (
-    <div className="pointer-events-none relative mb-4 flex gap-4 rounded-2xl border-b border-zinc-200 bg-zinc-200 p-3">
+    <div className="pointer-events-none relative mb-4 flex gap-4 rounded-2xl border border-zinc-200/60 bg-zinc-100 p-3">
       <motion.div
         layoutId={`captain-${id}-captains-page`}
         transition={{ type: 'spring', stiffness: 140, damping: 17, mass: 1 }}
       >
         <Image
-          className="z-10 aspect-square w-16 rounded-full border-4 border-zinc-100 bg-zinc-200"
+          className="z-10 aspect-square w-16 rounded-full border-4 border-zinc-200 bg-zinc-200"
           src={`/trainers/${image}`}
           alt={name}
           width={866}
