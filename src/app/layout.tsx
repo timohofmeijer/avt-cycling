@@ -16,7 +16,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="en">
       <body className={`${poppins.className} flex items-center justify-center bg-zinc-50`}>
         <PageHeader />
-        <main className="flex min-h-screen max-w-lg flex-col items-center justify-between overflow-x-hidden p-8 pt-32">
+        <main className="flex min-h-screen max-w-lg flex-col items-center justify-between overflow-x-hidden p-8 pt-32 pb-24">
           <PageAnimationWrapper>{children}</PageAnimationWrapper>
         </main>
       </body>
