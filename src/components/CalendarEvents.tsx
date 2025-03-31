@@ -14,7 +14,7 @@ type Props = {
 }
 
 const getEventTypeColors = (type: EventType): { bg: string; border: string; text: string } => {
-  const regular = { bg: 'bg-blue-50', border: 'border-blue-700/20', text: 'text-blue-700/80' }
+  const regular = { bg: 'bg-blue-50/80', border: 'border-blue-700/20', text: 'text-blue-700/80' }
   switch (type) {
     case 'training':
       return regular
@@ -26,7 +26,7 @@ const getEventTypeColors = (type: EventType): { bg: string; border: string; text
       return { bg: 'bg-white', border: 'border-black-200', text: 'text-black-500/30' }
     case 'event':
       return {
-        bg: 'bg-yellow-50',
+        bg: 'bg-yellow-50/80',
         border: 'border-yellow-200',
         text: 'text-yellow-500/30',
       }
@@ -61,7 +61,9 @@ export const CalendarEvents: React.FC<Props> = ({ events, captainsMap, onCaptain
                 </div>
               </div>
               <div className="flex-1">
-                <div className={`p-2 rounded-md ${colors.bg} border ${colors.border}`}>
+                <div className={`relative p-2 rounded-md  overflow-hidden border ${colors.border}`}>
+                  <div className={`absolute inset-0 -z-10 ${colors.bg}`} />
+                  <div className={`absolute inset-0 -z-20 bg-white`} />
                   <div className="flex justify-between items-start">
                     <div className="text-sm font-medium text-gray-800">{event.title}</div>
                     {event.startTime && event.endTime && (

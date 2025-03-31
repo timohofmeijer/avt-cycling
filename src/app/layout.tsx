@@ -12,7 +12,7 @@ export const metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
-      <body className={`${poppins.className} flex justify-center items-center bg-zinc-100`}>
+      <body className={`${poppins.className} flex justify-center items-center bg-zinc-50`}>
         <header
           className="fixed top-0 left-0 z-20 flex flex-col justify-center w-full h-20 p-3 overflow-hidden backdrop-blur"
           id="headerPortal"
