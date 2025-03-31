@@ -110,7 +110,7 @@ export const CalendarEvents: React.FC<Props> = ({ events, captainsMap, onCaptain
                                 alt={captain.name}
                                 width={24}
                                 height={24}
-                                className="w-full h-full object-cover"
+                                className="w-full h-full object-cover text-transparent"
                                 title={captain.name}
                               />
                             </motion.div>
