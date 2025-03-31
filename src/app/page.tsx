@@ -16,8 +16,8 @@ export default function Home() {
     <PageAnimation direction="left">
       <PageHeaderContent page="home" />
       <div>
-        <div className="flex items-center justify-center px-4 py-2 bg-zinc-200/40 border border-zinc-300/40 rounded-lg mb-8">
-          <LinkButton href="/kalender">Bekijk de kalender voor 2025!</LinkButton>
+        <div className="transition-color mb-8 flex items-center justify-center rounded-lg border border-zinc-200/50 bg-zinc-100/60 px-4 py-2 hover:bg-zinc-100">
+          <LinkButton href="/kalender">Bekijk de kalender voor 2025</LinkButton>
         </div>
         {/* <p className="mb-4">
         Welkom op de website van de wielrengroep van AVTriathlon! Deze website is in het leven geroepen
