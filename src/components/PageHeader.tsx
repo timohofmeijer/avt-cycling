@@ -5,7 +5,7 @@ export const PageHeader = () => {
       id="headerPortal"
     >
       <a
-        className="absolute right-4 z-20 select-none"
+        className="absolute right-4 z-20 mt-1 select-none"
         target="_blank"
         href="https://avtriathlon.nl/fietsen/wielrennen/"
       >
