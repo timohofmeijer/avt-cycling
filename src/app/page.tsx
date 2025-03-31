@@ -8,7 +8,7 @@ import { Paragraph } from '@/components/Paragraph'
 export const metadata: Metadata = {
   title: 'AVT Wielrennen',
   description:
-    'Op deze site vind je een overzicht van de afspraken en signalen die we hanteren tijdens de wielrengroepsritten van AVTriathlon.',
+    'Op deze site vind je een overzicht van de afspraken en signalen die we hanteren als we met AV Triathlon samen op de weg rijden.',
 }
 
 export default function Home() {
@@ -20,12 +20,12 @@ export default function Home() {
           <LinkButton href="/kalender">Bekijk de kalender voor 2025</LinkButton>
         </div>
         {/* <p className="mb-4">
-        Welkom op de website van de wielrengroep van AVTriathlon! Deze website is in het leven geroepen
+        Welkom op de website van de wielrengroep van AV Triathlon! Deze website is in het leven geroepen
         om de afspraken en signalen van onze groepsritten helder te kunnen communiceren.
       </p> */}
         <p className="mb-4 text-lg">
-          Op deze site vind je een overzicht van de afspraken en signalen die we hanteren tijdens de
-          wielrengroepsritten van AVTriathlon.
+          Op deze site vind je een overzicht van de afspraken en signalen die we hanteren als we met
+          AV Triathlon samen op de weg rijden.
         </p>
         <Title>Wat willen we hiermee bereiken</Title>
         <Paragraph>
@@ -76,7 +76,7 @@ export default function Home() {
         <section>
           <Title>Wegkapiteins</Title>
           <Paragraph>
-            Bij alle groepsritten van AVTriathlon rijdt er tenminste één wegkapitein mee. Een
+            Bij alle groepsritten van AV Triathlon rijdt er tenminste één wegkapitein mee. Een
             wegkapitein bepaalt de route en zorgt ervoor dat we zoals afgesproken rijden. Volg zijn
             of haar aanwijzingen op, dan houden we het samen veilig en voorspelbaar! 🙏🏼
           </Paragraph>
