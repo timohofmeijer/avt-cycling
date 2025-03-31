@@ -17,7 +17,7 @@ export const PageHeaderContent: React.FC<{ page: PageType }> = ({ page }) => {
     ? createPortal(
         <>
           <motion.div
-            className="absolute top-4 bottom-3 z-10 w-full"
+            className="absolute top-4 bottom-3 z-10 w-full pt-[var(--safeAreaInsetTop)]"
             initial={{ scale: 0.5, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
             // transition={{ delay: 0.2 }}
