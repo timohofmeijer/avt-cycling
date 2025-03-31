@@ -4,6 +4,8 @@ import { CaptainData } from '@/config/captains'
 import { motion, AnimatePresence } from 'motion/react'
 import { createPortal } from 'react-dom'
 import Image from 'next/image'
+import { useState, useEffect } from 'react'
+import { captains } from '@/config/captains'
 
 type Props = {
   zoomedCaptain: { captain: CaptainData; idSuffix: string } | null
@@ -11,6 +13,14 @@ type Props = {
 }
 
 export const ZoomedCaptainModal: React.FC<Props> = ({ zoomedCaptain, onClose }) => {
+  useEffect(() => {
+    // Preload all captain images
+    captains.forEach((captain) => {
+      const img = new window.Image()
+      img.src = `/trainers/${captain.image}`
+    })
+  }, [])
+
   if (typeof window === 'undefined') return null
 
   return createPortal(
@@ -34,6 +44,7 @@ export const ZoomedCaptainModal: React.FC<Props> = ({ zoomedCaptain, onClose }) 
                 alt={zoomedCaptain.captain.name}
                 fill
                 className="rounded-full bg-zinc-300/10 object-cover border-8 w-[280px] h-[280px]"
+                priority
               />
               <div className="absolute -bottom-10 left-0 right-0 text-zinc-100 text-center py-2 text-base">
                 {zoomedCaptain.captain.name}

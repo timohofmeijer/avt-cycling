@@ -61,7 +61,7 @@ export const CalendarEvents: React.FC<Props> = ({ events, captainsMap, onCaptain
                 </div>
               </div>
               <div className="flex-1">
-                <div className={`relative p-2 rounded-md  overflow-hidden border ${colors.border}`}>
+                <div className={`relative p-2 rounded-md border ${colors.border}`}>
                   <div className={`absolute inset-0 -z-10 ${colors.bg}`} />
                   <div className={`absolute inset-0 -z-20 bg-white`} />
                   <div className="flex justify-between items-start">
@@ -87,7 +87,7 @@ export const CalendarEvents: React.FC<Props> = ({ events, captainsMap, onCaptain
                     </div>
                     {/* Render Captain Avatars */}
                     {event.captainIds && event.captainIds.length > 0 && (
-                      <div className="flex items-center gap-1 ml-2">
+                      <div className="flex items-center gap-1 ml-2 z-10">
                         {event.captainIds.map((captainId) => {
                           const captain = captainsMap.get(captainId)
                           if (!captain || captain.image === 'blank.png') return null // Skip if captain not found or has blank image
@@ -96,7 +96,6 @@ export const CalendarEvents: React.FC<Props> = ({ events, captainsMap, onCaptain
                               key={captainId}
                               layoutId={`captain-${captainId}-${event.date}`}
                               transition={{ type: 'spring', stiffness: 140, damping: 17, mass: 1 }}
-                              style={{ transformOrigin: '50% 50% 0px' }}
                               className={cn(
                                 'w-6 h-6 rounded-full overflow-hidden border-black/10 cursor-pointer border-2 hover:scale-110 relative z-[99]',
                                 `border: ${colors.border}`
