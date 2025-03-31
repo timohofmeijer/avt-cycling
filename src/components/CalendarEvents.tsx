@@ -35,9 +35,9 @@ export const CalendarEvents: React.FC<Props> = ({ events, captainsMap, onCaptain
                 </div>
               </div>
               <div className="flex-1">
-                <div className={`relative p-2 rounded-md border ${colors.border}`}>
+                <div className={`relative p-2 rounded-md border ${colors.border} ${event.type === 'cancelled' ? 'opacity-50' : ''}`}>
                   <div className={`absolute inset-0 -z-10 ${colors.bg}`} />
-                  <div className={`absolute inset-0 -z-20 bg-white`} />
+                  <div className={`absolute inset-0 -z-20 bg-white ${event.type === 'cancelled' ? 'opacity-40' : ''}`} />
                   <div className="flex justify-between items-start">
                     <div className="text-sm font-medium text-gray-800">{event.title}</div>
                     {event.startTime && event.endTime && (
@@ -135,9 +135,9 @@ const getEventTypeColors = (type: EventType): { bg: string; border: string; text
       }
     case 'cancelled':
       return {
-        bg: 'bg-black/5 opacity-40',
-        border: 'border-black/20',
-        text: 'text-black/20',
+        bg: 'bg-black/4',
+        border: 'border-black/10',
+        text: 'text-black/10',
       }
     case 'baan':
       return {
