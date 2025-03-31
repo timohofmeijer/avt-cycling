@@ -7,9 +7,12 @@ export const LinkButton: React.FC<{ children: React.ReactNode; href: string }> =
   href,
 }) => {
   return (
-    <Link href={href} className="flex items-center gap-1 my-4 text-blue-700 justify-items-center">
+    <Link
+      href={href}
+      className="group my-4 flex items-center justify-items-center gap-1 text-blue-700"
+    >
       {children}
-      <BsChevronRight size={18} />
+      <BsChevronRight size={18} className="group-hover:animate-left-right" />
     </Link>
   )
 }
