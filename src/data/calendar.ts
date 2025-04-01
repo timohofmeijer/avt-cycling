@@ -51,7 +51,7 @@ const allCalendarEvents: CalendarEvent[] = [
     type: 'fastride',
     startTime: '09:00',
     endTime: '12:00',
-    captainIds: ['peter_van_dartel'],
+    captainIds: ['peter_van_dartel', 'luuc_rutgers'],
   },
   {
     date: '2025-04-09',
@@ -76,7 +76,7 @@ const allCalendarEvents: CalendarEvent[] = [
     type: 'groupride',
     startTime: '19:00',
     endTime: formatSunsetTime('2025-04-16'),
-    captainIds: ['luuc_rutgers'],
+    captainIds: ['luuc_rutgers', 'frank_zaal'],
   },
   {
     date: '2025-04-18',
@@ -93,6 +93,7 @@ const allCalendarEvents: CalendarEvent[] = [
     type: 'groupride',
     startTime: '19:00',
     endTime: formatSunsetTime('2025-04-23'),
+    captainIds: ['luuc_rutgers'],
   },
   {
     date: '2025-04-25',
@@ -116,7 +117,7 @@ const allCalendarEvents: CalendarEvent[] = [
     type: 'groupride',
     startTime: '19:00',
     endTime: formatSunsetTime('2025-04-30'),
-    captainIds: ['luuc_rutgers'],
+    captainIds: ['luuc_rutgers', 'frank_zaal'],
   },
   {
     date: '2025-05-03',
@@ -138,6 +139,7 @@ const allCalendarEvents: CalendarEvent[] = [
     type: 'groupride',
     startTime: '19:00',
     endTime: formatSunsetTime('2025-05-07'),
+    captainIds: ['daan_hulzinga', 'frank_zaal'],
   },
   {
     date: '2025-05-11',
@@ -163,6 +165,7 @@ const allCalendarEvents: CalendarEvent[] = [
     type: 'groupride',
     startTime: '19:00',
     endTime: formatSunsetTime('2025-05-14'),
+    captainIds: ['daan_hulzinga'],
   },
   {
     date: '2025-05-18',
@@ -186,6 +189,7 @@ const allCalendarEvents: CalendarEvent[] = [
     type: 'groupride',
     startTime: '19:00',
     endTime: formatSunsetTime('2025-05-21'),
+    captainIds: ['daan_hulzinga'],
   },
   {
     date: '2025-05-26',
@@ -194,7 +198,7 @@ const allCalendarEvents: CalendarEvent[] = [
     type: 'training',
     startTime: '19:00',
     endTime: formatSunsetTime('2025-05-26'),
-    captainIds: ['peter_kuin'],
+    captainIds: ['peter_kuin', 'luuc_rutgers'],
   },
   {
     date: '2025-05-28',
@@ -227,6 +231,7 @@ const allCalendarEvents: CalendarEvent[] = [
     type: 'groupride',
     startTime: '19:00',
     endTime: formatSunsetTime('2025-06-04'),
+    captainIds: ['daan_hulzinga'],
   },
   {
     date: '2025-06-07',
@@ -294,7 +299,7 @@ const allCalendarEvents: CalendarEvent[] = [
     type: 'training',
     startTime: '19:00',
     endTime: formatSunsetTime('2025-06-23'),
-    captainIds: ['djoeke_donkers'],
+    captainIds: ['luuc_rutgers', 'djoeke_donkers'],
   },
   {
     date: '2025-06-25',
