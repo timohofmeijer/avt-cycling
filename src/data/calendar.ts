@@ -557,15 +557,4 @@ if (!allCalendarEvents.some((event) => event.date === firstEventDate)) {
   allCalendarEvents.sort((a, b) => new Date(a.date).getTime() - new Date(b.date).getTime())
 }
 
-export const getUpcomingEvents = (): CalendarEvent[] => {
-  const today = new Date()
-  today.setHours(0, 0, 0, 0)
-
-  return allCalendarEvents.filter((event) => {
-    const eventDate = new Date(event.date)
-    eventDate.setHours(0, 0, 0, 0)
-    return eventDate >= today && event.type !== 'triathlon'
-  })
-}
-
-export const calendarEvents = getUpcomingEvents()
+export const calendarEvents = allCalendarEvents
