@@ -46,6 +46,7 @@ export const Calendar: React.FC<Props> = ({ events }) => {
       <div className="overflow-hidden rounded-lg bg-white/0">
         {MONTHS.map((month, index) => {
           const monthEvents = eventsByMonth[index] || []
+          if (monthEvents.length === 0) return null
           return (
             <div key={month}>
               <div className="sticky top-0 z-10 border-b border-gray-200 bg-white/0">
