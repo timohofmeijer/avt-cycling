@@ -83,10 +83,10 @@ export const captains: CaptainData[] = [
     image: 'blank2.png',
     stravaId: '32433862',
   },
-  {
-    id: 'timo_hofmeijer',
-    name: 'Timo',
-    image: 'timo.jpeg',
-    stravaId: '2019517',
-  },
+  // {
+  //   id: 'timo_hofmeijer',
+  //   name: 'Timo',
+  //   image: 'timo.jpeg',
+  //   stravaId: '2019517',
+  // },
 ]

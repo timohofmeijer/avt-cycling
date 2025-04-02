@@ -33,7 +33,7 @@ const allCalendarEvents: CalendarEvent[] = [
     type: 'groupride',
     startTime: '19:00',
     endTime: formatSunsetTime('2025-04-02'),
-    captainIds: ['timo_hofmeijer', 'sjoerd_roelofs'],
+    captainIds: ['sjoerd_roelofs'],
   },
   {
     date: '2025-04-04',
