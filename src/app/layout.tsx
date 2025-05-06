@@ -39,7 +39,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <main className="flex min-h-screen max-w-lg flex-col items-center justify-between overflow-x-hidden p-8 pt-[calc((--spacing(32)+var(--safeAreaInsetTop)))] pb-24">
           <PageAnimationWrapper>{children}</PageAnimationWrapper>
         </main>
-        <Analytics />
+        <Analytics
+          scriptSrc="https://avt-cycling.vercel.app/dolor/script.js"
+          endpoint="https://avt-cycling.vercel.app/dolor"
+        />
       </body>
     </html>
   )

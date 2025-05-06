@@ -1,0 +1,8 @@
+{
+  "rewrites": [
+    {
+      "source": "/dolor/:match*",
+      "destination": "/_vercel/insights/:match*"
+    }
+  ]
+}
