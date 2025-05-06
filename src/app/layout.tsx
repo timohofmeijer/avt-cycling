@@ -2,7 +2,7 @@ import { Viewport } from 'next'
 import { Poppins } from 'next/font/google'
 import { PageAnimationWrapper } from '@/components/PageAnimationWrapper'
 import { PageHeader } from '@/components/PageHeader'
-import { Analytics } from '@vercel/analytics/react'
+import { Analytics } from '@vercel/analytics/next'
 
 import './globals.css'
 
