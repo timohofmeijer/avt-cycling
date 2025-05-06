@@ -2,7 +2,7 @@
   "rewrites": [
     {
       "source": "/dolor/:path*",
-      "destination": "/_vercel/insights/:path*"
+      "destination": "https://avt-cycling.vercel.app/_vercel/insights/:path*"
     }
   ]
 }
