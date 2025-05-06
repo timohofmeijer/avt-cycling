@@ -2,6 +2,7 @@ import { Viewport } from 'next'
 import { Poppins } from 'next/font/google'
 import { PageAnimationWrapper } from '@/components/PageAnimationWrapper'
 import { PageHeader } from '@/components/PageHeader'
+import { Analytics } from '@vercel/analytics/react'
 
 import './globals.css'
 
@@ -38,6 +39,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <main className="flex min-h-screen max-w-lg flex-col items-center justify-between overflow-x-hidden p-8 pt-[calc((--spacing(32)+var(--safeAreaInsetTop)))] pb-24">
           <PageAnimationWrapper>{children}</PageAnimationWrapper>
         </main>
+        <Analytics />
       </body>
     </html>
   )
