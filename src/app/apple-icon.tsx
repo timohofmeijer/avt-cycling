@@ -28,11 +28,7 @@ export function generateImageMetadata() {
 export default function Icon({ id }: { id: string }) {
   const size = parseInt(id)
   return new ImageResponse(
-    (
-      <AvtIcon
-        style={{ width: '100%', height: '100%', padding: '30px', backgroundColor: '#f5f4f4' }}
-      />
-    ),
+    <AvtIcon width={size} height={size} style={{ padding: '30px', backgroundColor: '#f5f4f4' }} />,
     {
       width: size,
       height: size,

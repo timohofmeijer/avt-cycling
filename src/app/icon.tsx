@@ -23,7 +23,7 @@ export default function Icon({ id }: { id: string }) {
   return new ImageResponse(
     (
       // ImageResponse JSX element
-      <AvtIcon style={{ width: '100%', height: '100%' }} />
+      <AvtIcon width={size} height={size} />
     ),
     {
       width: size,

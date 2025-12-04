@@ -65,27 +65,34 @@ export const Calendar: React.FC<Props> = ({ events }) => {
   return (
     <>
       <ZoomedCaptainModal zoomedCaptain={zoomedCaptain} onClose={() => setZoomedCaptain(null)} />
-
       <div className="overflow-hidden rounded-lg bg-white/0">
-        {MONTHS.map((month, index) => {
-          const monthEvents = eventsByMonth[index] || []
-          // Show all months during server-side rendering or if there are events
-          if (mounted && monthEvents.length > 0) {
-            return (
-              <div key={month}>
-                <div className="sticky top-0 z-10 border-b border-gray-200 bg-white/0">
-                  <h3 className="p-4 pl-0 text-lg font-semibold text-gray-800">{month}</h3>
-                </div>
-                <CalendarEvents
-                  events={monthEvents}
-                  captainsMap={captainsMap}
-                  onCaptainClick={(captain, idSuffix) => setZoomedCaptain({ captain, idSuffix })}
-                />
-              </div>
-            )
-          }
-          return null
-        })}
+        {filteredEvents?.length ? (
+          <>
+            {MONTHS.map((month, index) => {
+              const monthEvents = eventsByMonth[index] || []
+              // Show all months during server-side rendering or if there are events
+              if (mounted && monthEvents.length > 0) {
+                return (
+                  <div key={month}>
+                    <div className="sticky top-0 z-10 border-b border-gray-200 bg-white/0">
+                      <h3 className="p-4 pl-0 text-lg font-semibold text-gray-800">{month}</h3>
+                    </div>
+                    <CalendarEvents
+                      events={monthEvents}
+                      captainsMap={captainsMap}
+                      onCaptainClick={(captain, idSuffix) =>
+                        setZoomedCaptain({ captain, idSuffix })
+                      }
+                    />
+                  </div>
+                )
+              }
+              return null
+            })}
+          </>
+        ) : (
+          <p className="text-black/20">Er voor dit seizoen nog geen ritten in de kalender 😢</p>
+        )}
       </div>
     </>
   )
