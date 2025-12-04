@@ -91,7 +91,9 @@ export const Calendar: React.FC<Props> = ({ events }) => {
             })}
           </>
         ) : (
-          <p className="text-black/20">Er voor dit seizoen nog geen ritten in de kalender 😢</p>
+          <p className="text-black/20">
+            Er staan voor dit seizoen nog geen ritten in de kalender 😢
+          </p>
         )}
       </div>
     </>
